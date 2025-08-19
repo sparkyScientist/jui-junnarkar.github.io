@@ -240,7 +240,7 @@
         In materials science, a deceptively simple question shapes the outcome of an experiment: “What is the size distribution of my nanoparticles?” Transmission Electron Microscopy (TEM) images hold that answer, but turning those images into meaningful numbers has long been a frustrating bottleneck.
     </p>
     <p class="text-lg leading-relaxed">
-        Manually outlining hundreds of particles is not only slow — it also introduces inconsistency. Results vary depending on who’s doing the tracing, making the data less reliable. I built this tool to get around that barrier: replacing a time-consuming, error-prone process with one that is objective, automated, and dramatically faster.
+        Manually outlining hundreds of particles is not only slow, it also introduces inconsistency. Results vary depending on who’s doing the tracing, making the data less reliable. I built this tool to get around that barrier: replacing a time-consuming, error-prone process with one that is objective, automated, and dramatically faster.
     </p>
 </section>
 
@@ -251,7 +251,7 @@
     <div class="mt-8">
         <h3 class="text-2xl font-semibold mb-2">Step 1: Teaching the AI with Professional Tools</h3>
         <p class="text-lg leading-relaxed mb-4">
-            An AI model is only as good as the data it learns from. To build a solid foundation, I turned to <strong>Roboflow</strong>, a platform for managing computer vision datasets. I uploaded 80 TEM images covering the range of our samples — from 5 nm to 50 nm scale bars — and drew polygon masks around several thousand particles. Roboflow’s annotation and versioning tools streamlined the process, and just as importantly, made sure the dataset was clean and reproducible.
+            An AI model is only as good as the data it learns from. To build a solid foundation, I turned to <strong>Roboflow</strong>, a platform for managing computer vision datasets. I uploaded 80 TEM images covering the range of our samples, from 5 nm to 50 nm scale bars, and drew polygon masks around several thousand particles. Roboflow’s annotation and versioning tools streamlined the process, and just as importantly, made sure the dataset was clean and reproducible.
         </p>
 
         <!-- IMAGE PLACEHOLDER 1 -->
@@ -264,7 +264,7 @@
     <div class="mt-12">
         <h3 class="text-2xl font-semibold mb-2">Step 2: Training a "Specialist" Model in the Cloud</h3>
         <p class="text-lg leading-relaxed mb-4">
-            Training a deep learning model takes a lot of computing power. To get access to GPUs without the price tag, I used Google Colab and the Detectron2 framework. Detectron2’s Mask R-CNN architecture is well-suited for instance segmentation — identifying and outlining individual objects in an image.
+            Training a deep learning model takes a lot of computing power. To get access to GPUs without the price tag, I used Google Colab and the Detectron2 framework. Detectron2’s Mask R-CNN architecture is well-suited for instance segmentation, identifying and outlining individual objects in an image.
         </p>
         <p class="text-lg leading-relaxed mb-4">
             I fine-tuned the model on my annotated dataset until it could reliably pick out particles on images it had never seen before. The trained network was then saved into a single portable file, <code>model_final.pth</code>, which became the core “brain” of the application.
