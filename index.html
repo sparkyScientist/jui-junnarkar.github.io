@@ -108,8 +108,8 @@
                         <img src="https://placehold.co/800x400/e2e8f0/334155?text=App+Screenshot" alt="AI Analyzer App" class="w-full h-48 object-cover">
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold mb-2">AI-Powered TEM Catalyst Particle Analyzer</h3>
-                            <p class="text-gray-600 mb-4 flex-grow">A desktop application to automate nanoparticle size analysis from TEM images.</p>
-                            <a href="#" onclick="showPost('post-analyzer')" class="text-blue-600 font-semibold hover:underline self-start">Read More &rarr;</a>
+                            <p class="text-gray-600 mb-4 flex-grow">A deep dive into the development of a custom computer vision tool for catalyst characterization.</p>
+                            <a href="#" onclick="showPost('post-analyzer-article')" class="text-blue-600 font-semibold hover:underline self-start">Read More &rarr;</a>
                         </div>
                     </div>
                     <!-- Post Card 2 -->
@@ -118,7 +118,7 @@
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-2xl font-bold mb-2">Optimizing Carbon Nanotube Synthesis</h3>
                             <p class="text-gray-600 mb-4 flex-grow">Developing computational models to enhance Floating Catalyst Chemical Vapor Deposition (FCCVD).</p>
-                            <a href="#" onclick="showPost('post-fccvd')" class="text-blue-600 font-semibold hover:underline self-start">Read More &rarr;</a>
+                            <a href="#" onclick="showPost('post-fccvd-article')" class="text-blue-600 font-semibold hover:underline self-start">Read More &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -162,28 +162,164 @@
 
         <!-- Posts Section -->
         <section id="posts" class="page-section max-w-4xl mx-auto px-6 py-12">
-            <h2 class="text-4xl font-bold text-center mb-12">Project Posts</h2>
+            
+            <!-- This container shows the list of post cards -->
+            <div id="post-list-container">
+                <h2 class="text-4xl font-bold text-center mb-12">Project Posts</h2>
+                <div class="space-y-12">
+                    <!-- Post Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        <img src="https://placehold.co/800x400/e2e8f0/334155?text=App+Screenshot" alt="AI Analyzer App" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold mb-2">AI-Powered TEM Catalyst Particle Analyzer</h3>
+                            <p class="text-lg text-gray-600 mb-6">A deep dive into the development of a custom computer vision tool for catalyst characterization.</p>
+                            <a href="#" onclick="viewPost('post-analyzer-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Post Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        <img src="https://placehold.co/800x400/e2e8f0/334155?text=CFD+Simulation" alt="CFD Simulation" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold mb-2">Optimizing Carbon Nanotube Synthesis</h3>
+                            <p class="text-lg text-gray-600 mb-6">Developing computational models to enhance Floating Catalyst Chemical Vapor Deposition (FCCVD).</p>
+                            <a href="#" onclick="viewPost('post-fccvd-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Add more post cards here -->
+                </div>
+            </div>
+            
+            <!-- Post 1: TEM AI Catalyst Analyzer -->
+             <div id="post-article-container" style="display: none;">
+                <button onclick="viewPostList()" class="mb-8 text-blue-600 font-semibold hover:underline">&larr; Back to All Posts</button>
             
             <!-- Post 1: TEM AI Catalyst Analyzer -->
             <div id="post-analyzer" class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 mb-12 scroll-mt-20">
                 <div class="p-8">
-                    <p class="text-sm text-gray-500 mb-2">Project Spotlight</p>
-                    <h3 class="text-3xl font-bold mb-2">AI-Powered TEM Catalyst Particle Analyzer</h3>
-                    <p class="text-lg text-gray-600 mb-6">A desktop application to automate nanoparticle size analysis from TEM images.</p>
-                    <img src="https://placehold.co/800x400/e2e8f0/334155?text=App+Screenshot+or+Diagram" alt="Project Diagram" class="rounded-lg mb-6 w-full">
-                    <div class="space-y-4 text-gray-700 leading-relaxed">
-                        <p>Manual particle size analysis from Transmission Electron Microscopy (TEM) images is a major bottleneck in materials research—it's time-consuming, subjective, and doesn't scale. To solve this, I developed a user-friendly application that leverages an AI model to automate the detection and measurement of catalyst nanoparticles.</p>
-                        <h4 class="text-xl font-bold pt-2">Core Features</h4>
-                        <ul class="list-disc list-inside space-y-2">
-                            <li><strong>Automated Particle Detection:</strong> Utilizes a custom-trained computer vision model to identify and segment nanoparticles with high accuracy.</li>
-                            <li><strong>Batch Processing & Data Export:</strong> Analyze entire folders of images at once and instantly export size distribution data and histograms for reports.</li>
-                            <li><strong>Interactive GUI:</strong> Provides a simple interface for users to load images, run the analysis, and review the results.</li>
-                        </ul>
-                        <p>This tool transforms a tedious manual task into a rapid, accurate, and reproducible workflow, accelerating the pace of catalyst research and development.</p>
-                        <a href="#" class="inline-block mt-2 text-blue-600 hover:underline">View on GitHub &rarr;</a>
-                    </div>
+                    <article class="prose lg:prose-xl max-w-none">
+    
+                        <!-- Post Header -->
+                        <header class="mb-12 border-b pb-8">
+                            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Automating Catalyst Characterization: An AI-Powered Tool for TEM Particle Size Analysis</h1>
+                            <p class="mt-4 text-xl text-gray-600">A deep dive into the development of a custom computer vision tool, from painstaking data annotation to a fully-functional desktop application.</p>
+                            <div class="mt-6">
+                                <span class="text-gray-500">Published on: August 19, 2025</span>
+                            </div>
+                        </header>
+                    
+                        <!-- The Problem Section -->
+                        <section class="mb-12">
+                            <h2 class="text-3xl font-bold mb-4">The High Cost of a Simple Question</h2>
+                            <p class="text-lg leading-relaxed mb-4">
+                                In materials science, a fundamental question dictates the success of an experiment: "What is the size distribution of my nanoparticles?" The answer, found in Transmission Electron Microscopy (TEM) images, is critical. Yet, the process of getting that answer is a well-known bottleneck that slows down innovation.
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                Manually outlining hundreds of particles is not just slow; it's a source of significant experimental error. The results are subjective, varying from person to person, introducing inconsistency that can compromise research findings. I built this tool to eliminate this bottleneck, replacing a manual, error-prone process with an objective, automated, and incredibly fast solution.
+                            </p>
+                        </section>
+                    
+                        <!-- The Workflow Section -->
+                        <section class="mb-12">
+                            <h2 class="text-3xl font-bold mb-4">The Development Journey: A Three-Step Process</h2>
+                            
+                            <div class="mt-8">
+                                <h3 class="text-2xl font-semibold mb-2">Step 1: Teaching the AI with Professional Tools</h3>
+                                <p class="text-lg leading-relaxed mb-4">An AI model is only as smart as the data it's trained on. To manage this process efficiently, I used <strong>Roboflow</strong>, a platform designed for computer vision dataset management. I uploaded 80 TEM images representing the full diversity of our samples—with magnifications ranging from 5nm to 50nm scale bars—and used Roboflow's annotation tools to draw a precise polygon mask around several thousand individual catalyst particles. This not only streamlined the labeling process but also helped in organizing and versioning the dataset, which is crucial for creating a reproducible and robust model.</p>
+                                
+                                <!-- IMAGE PLACEHOLDER 1 -->
+                                <div class="my-8">
+                                    <img src="https://placehold.co/800x400/e2e8f0/64748b?text=Image+Placeholder" alt="Side-by-side comparison of a raw TEM image and the same image with manual annotations" class="rounded-lg border">
+                                    <p class="image-caption">Left: A raw TEM image. Right: The same image after manual annotation in Roboflow, with each particle's mask clearly defined.</p>
+                                </div>
+                            </div>
+                    
+                            <div class="mt-12">
+                                <h3 class="text-2xl font-semibold mb-2">Step 2: Training a "Specialist" Model in the Cloud</h3>
+                                <p class="text-lg leading-relaxed mb-4">Training a deep learning model requires immense computational power. I leveraged Google Colab for free access to high-performance GPUs, which are essential for this task. Using the Detectron2 framework, I configured a Mask R-CNN model—an architecture perfect for instance segmentation (detecting and outlining individual objects).</p>
+                                <p class="text-lg leading-relaxed mb-4">I fed my annotated dataset to this model and began the fine-tuning process. This technique takes a powerful model pre-trained on millions of general images and re-trains it to become a "specialist" on one specific task. After many iterations of training and validation, I had a highly accurate model that could identify catalyst particles on new, unseen images. The entire "brain" of this trained model was then exported into a single, portable file: `model_final.pth`.</p>
+                                
+                                <!-- IMAGE PLACEHOLDER 2 -->
+                                <div class="my-8">
+                                    <img src="https://placehold.co/800x400/e2e8f0/64748b?text=Image+Placeholder" alt="The trained AI model identifying particles on a new TEM image" class="rounded-lg border">
+                                    <p class="image-caption">The result of the training: the AI model automatically identifying and segmenting particles on a previously unseen image.</p>
+                                </div>
+                            </div>
+                    
+                            <div class="mt-12">
+                                <h3 class="text-2xl font-semibold mb-2">Step 3: From a Model File to an Intuitive Desktop App</h3>
+                                <p class="text-lg leading-relaxed">A model file on its own isn't a useful tool. The final step was to build a user-friendly interface that anyone in the lab could use. I developed a standalone desktop application using Python and the Tkinter library. This application serves as an intuitive "wrapper" around the powerful AI model. When a user runs an analysis, the app loads the `model_final.pth` file, processes the user's images, feeds them to the AI for prediction, and then translates the raw output (pixel masks) into meaningful data: particle diameters, statistics, and a final histogram plot. This turned a complex command-line process into a simple, point-and-click solution.</p>
+                            </div>
+                        </section>
+                    
+                        <!-- App in Action Section -->
+                        <section class="mb-12">
+                            <h2 class="text-3xl font-bold mb-4">The Application in Action</h2>
+                            <p class="text-lg leading-relaxed mb-8">The final product is a seamless, end-to-end workflow. The user selects a folder of images, calibrates the scale with two clicks, and hits "Analyze." In seconds, the results appear: a side-by-side view for verification, real-time statistics (mean, std dev), and a combined particle size distribution (PSD) histogram. Any errors can be corrected with a simple click, and all data can be exported with one more.</p>
+                            
+                            <!-- VIDEO/GIF PLACEHOLDER -->
+                            <div class="bg-gray-800 rounded-lg my-8 aspect-video flex items-center justify-center border shadow-xl">
+                                <p class="text-gray-400 text-lg">[A GIF or embedded video showing the full workflow in real-time]</p>
+                            </div>
+                        </section>
+                    
+                        <!-- Challenges and Solutions Section -->
+                        <section class="mb-12">
+                            <h2 class="text-3xl font-bold mb-4">Challenges & Solutions</h2>
+                            <p class="text-lg leading-relaxed mb-6">No AI is perfect. Acknowledging limitations and building solutions for them is a critical part of creating a trustworthy scientific tool.</p>
+                            <div class="space-y-8">
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-2">Challenge 1: False Positives</h3>
+                                    <p class="text-lg leading-relaxed">Occasionally, the AI might incorrectly identify a piece of the carbon support or an artifact as a particle. To ensure 100% data integrity, I implemented the "human-in-the-loop" correction feature. In the app's review screen, the user can simply click on any incorrectly identified particle, and it is instantly removed from the dataset, with all statistics and plots updating in real-time.</p>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-2">Challenge 2: Overlapping Particles (False Negatives)</h3>
+                                    <p class="text-lg leading-relaxed">The model's biggest challenge is discerning individual particles in highly dense, overlapping clusters, where it sometimes misses a few. While the current version excels on dispersed samples, the next feature I plan to add is a manual annotation tool. This will allow a user to draw a new mask directly onto an image inside the app to include any particles the AI may have missed, providing a complete solution for even the most challenging images.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Quantitative Impact Section -->
+                        <section class="mb-12">
+                            <h2 class="text-3xl font-bold mb-4">Quantitative Impact</h2>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="metric-card">
+                                    <span class="text-4xl font-bold text-blue-600">>95%</span>
+                                    <p class="text-lg mt-2 text-gray-700">Time Saved</p>
+                                    <p class="text-sm text-gray-500">Reduced analysis time from ~3 hours to under 90 seconds for a typical batch of images.</p>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="text-4xl font-bold text-blue-600">~500%</span>
+                                    <p class="text-lg mt-2 text-gray-700">Increase in Data</p>
+                                    <p class="text-sm text-gray-500">Enabled analysis of far more particles, leading to more robust statistical distributions.</p>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="text-4xl font-bold text-blue-600">97%</span>
+                                    <p class="text-lg mt-2 text-gray-700">Model Accuracy (IoU)</p>
+                                    <p class="text-sm text-gray-500">Achieved a high Intersection over Union score, confirming its precision against human annotation.</p>
+                                </div>
+                            </div>
+                        </section>
+                    
+                        <!-- Technology Stack Section -->
+                        <section>
+                            <h2 class="text-3xl font-bold mb-6">Technology Stack</h2>
+                            <div class="flex flex-wrap">
+                                <span class="tag">Python</span>
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">Detectron2</span>
+                                <span class="tag">Google Colab</span>
+                                <span class="tag">Roboflow</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">Tkinter</span>
+                                <span class="tag">Matplotlib</span>
+                                <span class="tag">NumPy</span>
+                            </div>
+                        </section>
+                    
+                    </article>
                 </div>
             </div>
+
 
             <!-- Post 2: FCCVD Research -->
             <div id="post-fccvd" class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 mb-12 scroll-mt-20">
@@ -218,7 +354,7 @@
                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 -mt-32 relative z-10">
                     <div class="text-lg text-gray-700 leading-relaxed space-y-4">
                         <p>
-                            I am a Ph.D. Candidate in Chemical and Biomolecular Engineering at Rice University with a deep interest in leveraging technology to solve real-world scientific problems. My background is in Chemical Engineering, and through my doctoral research, I've developed a strong expertise in computational fluid dynamics, plasma processing, aerosol science, and scientific software development.
+                            I am a Ph.D. Candidate in the Pasquali group (Chemical and Biomolecular Engineering) at Rice University with a deep interest in leveraging technology to solve real-world scientific problems. My background is in Chemical Engineering, and through my doctoral research, I've developed a strong expertise in computational fluid dynamics, plasma processing, aerosol science, and scientific software development.
                         </p>
                         <p>
                             I believe that the future of scientific discovery lies in the synergy between domain expertise and computational tools. My goal is to continue building bridges between these two worlds, creating intuitive and powerful applications that empower researchers to ask bigger questions and get answers faster.
