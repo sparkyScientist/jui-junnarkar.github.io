@@ -352,46 +352,46 @@
                 </div>
 
                 
-                <!-- Full Article 3: Deep Injection FCCVD (short + deep dive) -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+  <img src="https://i.imgur.com/gK6fDk7.png" alt="A schematic showing the difference between conventional and deep-injection FCCVD reactors for CNT growth." class="w-full h-64 object-cover">
+  <div class="p-8">
+    <h3 class="text-3xl font-bold mb-2">Cracking the Code of CNT Growth</h3>
+    <p class="text-lg text-gray-600 mb-6">How transport phenomena in deep-injection reactors dictate catalyst lifetime and unlock high-yield carbon nanotube synthesis.</p>
+    <a href="#" onclick="viewPost('post-di-cnt-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+  </div>
+</div>
+
+
 <div id="post-di-cnt-article" class="full-post bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200" style="display:none;">
   <div class="p-8">
     <button onclick="viewPostList()" class="mb-6 text-blue-600 font-semibold hover:underline">&larr; Back to All Posts</button>
 
-    <!-- Header -->
     <header class="mb-8">
-      <p class="text-sm text-gray-500 mb-2">Ph.D. Research · Carbon Nanotubes · FCCVD</p>
       <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
-        Cracking the Code of CNT Growth: How Transport Phenomena Shape Deep-Injection Reactors
+        Cracking the Code of CNT Growth
       </h1>
       <p class="mt-4 text-xl text-gray-600">
-        A short, approachable read with the big aha moments — plus an optional deep dive with flow maps and dimensionless numbers.
+        A deep dive into how transport phenomena govern deep-injection chemical vapor deposition, with an approachable summary and an optional technical breakdown.
       </p>
-      <div class="mt-4 text-gray-500">Published on: <time datetime="2025-08-20">August 20, 2025</time></div>
+      <p class="mt-6 text-gray-500">AricKopke · August 20, 2025</p>
     </header>
 
-    <!-- SHORT VERSION (3–5 min read) -->
     <article class="prose lg:prose-xl max-w-none">
       <section class="mb-10">
         <p>
-          When I started working on carbon nanotube (CNT) synthesis, one question kept coming up:
-          <em>why are we still struggling to make CNTs efficiently at large scale, despite two decades of research?</em>
+          When I began my Ph.D. research on carbon nanotube (CNT) synthesis, one question stood out: <em>why is it still so hard to make high-quality CNTs at scale?</em> After decades of research, the process often felt more like an art than a science.
         </p>
         <p>
-          Most CNTs are grown by floating catalyst chemical vapor deposition (FCCVD). Inside the reactor, gases don’t flow neatly —
-          they swirl and recirculate, creating hot and cold pockets. That decides whether catalyst particles stay “just the right size”
-          to grow CNTs, or clump and deactivate.
+          The answer, it turns out, lies in the complex dance of gases inside the reactor. In conventional floating catalyst chemical vapor deposition (FCCVD), hot gases swirl and recirculate near the entrance, often deactivating the catalyst particles before they can even start growing nanotubes.
         </p>
         <p>
-          <strong>Deep injection (DI)</strong> changes the picture: instead of feeding gases from the front (where they get trapped), we inject them
-          deeper into the hot zone through a narrow tube. This launches a fast, cold jet down the center that collides with hot
-          recirculating gases along the walls. <strong>That overlap is where CNTs grow best.</strong>
+          <strong>Deep injection (DI)</strong> flips the script. By injecting the catalyst and precursor gases through a long, cooled tube, we launch a stable, high-speed jet deep into the reactor's hot zone. This jet punches through the recirculation, creating a well-defined reaction zone where the cold jet meets the hot reactor environment. <strong>This interface is the sweet spot for CNT growth.</strong>
         </p>
       </section>
 
-      <!-- Figure 1: Schematic -->
       <figure class="my-8">
-        <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+1:+Conventional+FCCVD+vs+Deep+Injection+(schematic)" alt="Schematic comparing conventional FCCVD entrance recirculation vs deep-injection jet overlapping with wall recirculation" class="rounded-lg border w-full">
-        <figcaption class="image-caption">Figure 1. Conventional FCCVD (left) vs. Deep Injection (right). DI launches a central jet that meets hot wall recirculation — the sweet spot for CNT growth.</figcaption>
+        <img src="https://i.imgur.com/gK6fDk7.png" alt="Schematic comparing conventional FCCVD entrance recirculation vs deep-injection jet overlapping with wall recirculation" class="rounded-lg border w-full">
+        <figcaption class="image-caption">Figure 1. Conventional FCCVD (left) often traps catalyst in a hot recirculation zone. Deep Injection (right) creates a stable central jet that provides a well-defined reaction zone, dramatically improving efficiency.</figcaption>
       </figure>
 
       <section class="grid md:grid-cols-3 gap-4 my-10">
@@ -410,74 +410,49 @@
       </section>
 
       <section class="mb-10">
-        <h2>What happens when you change the gases?</h2>
+        <h2>A Tale of Four Gases</h2>
+        <p>To prove that the flow regime—not just the chemistry—was the key, we systematically swapped the primary carrier gas (Argon) with others. Here’s what we found:</p>
         <ul>
-          <li><strong>Argon ↔ Nitrogen:</strong> No real change (similar transport properties).</li>
-          <li><strong>Helium:</strong> Lighter → shortens the jet → below ~30% He, OK; past that, productivity drops.</li>
-          <li><strong>Hydrogen:</strong> Same transport effect as He <em>plus</em> chemistry: at high H₂/CH₄, it suppresses active carbon species and growth collapses.</li>
+          <li><strong>Argon ↔ Nitrogen:</strong> Virtually no change. Their similar densities and thermal properties meant the flow structure remained intact.</li>
+          <li><strong>Helium:</strong> Being much lighter, Helium shortened the jet. Below ~30% He, the system was fine. Past that, the jet no longer effectively penetrated the hot zone, and productivity plummeted.</li>
+          <li><strong>Hydrogen:</strong> This was the most dramatic. It had the same transport effect as Helium (shortening the jet) but also introduced a chemical effect: at high concentrations, it actively suppressed the carbon species needed for growth, causing a total collapse.</li>
         </ul>
       </section>
 
-      <!-- Figure 2: Simple result plot -->
-      <figure class="my-8">
-        <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+2:+Conversion/Productivity+vs+Gas+Substitution" alt="Plot showing flat trend for N2, gradual drop for He beyond ~30%, sharp crash for high H2 fraction" class="rounded-lg border w-full">
-        <figcaption class="image-caption">Figure 2. N₂: flat. He: drop beyond ~30%. H₂: sharp crash at high ratios (transport + chemistry).</figcaption>
-      </figure>
-
       <p class="mt-6">
-        <strong>Aha:</strong> Growth doesn’t happen everywhere — it happens where the <em>cold jet</em> meets <em>hot recirculation</em>.
-        Transport decides if that overlap exists. Chemistry decides if it’s useful.
+        <strong>The key takeaway:</strong> Growth is not random. It happens precisely where the <em>cold, stable jet</em> meets the <em>hot, recirculating gases</em>. Transport phenomena define this zone, and chemistry determines what happens inside it.
       </p>
     </article>
 
-    <!-- DEEP DIVE (collapsible) -->
     <details class="mt-12 group">
       <summary class="cursor-pointer select-none list-none flex items-center justify-between bg-indigo-50 border border-indigo-200 rounded-xl px-5 py-4 hover:bg-indigo-100">
-        <span class="font-semibold text-indigo-900">Deep Dive: Flow maps, dimensionless numbers, and why jet length rules</span>
+        <span class="font-semibold text-indigo-900">Deep Dive: Flow Maps, Dimensionless Numbers, and Why Jet Length Rules</span>
         <svg class="w-5 h-5 text-indigo-700 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
       </summary>
       <div class="px-1 md:px-2 lg:px-3 py-6">
         <article class="prose lg:prose-xl max-w-none">
-          <h3>Transport framework: Re &amp; Ra</h3>
+          <h3>The Transport Framework: Reynolds and Rayleigh Numbers</h3>
           <p>
-            We quantify the jet/recirculation regime using <strong>Reynolds (Re)</strong> for jet momentum and <strong>Rayleigh (Ra)</strong> for buoyancy-driven convection,
-            evaluated at the cannula exit (simulation-derived injection temperature).
+            To quantify the balance between the jet and the surrounding flow, we used two dimensionless numbers: the <strong>Reynolds number ($Re$)</strong>, representing the jet's inertial force, and the <strong>Rayleigh number ($Ra$)</strong>, representing the buoyancy-driven natural convection. These were evaluated at the cannula exit using temperatures derived from our CFD simulations.
+          </p>
+          <p>
+            As we substituted Argon with lighter gases like Helium and Hydrogen, both $Re$ and $Ra$ decreased, signaling a weaker jet and less dominant buoyancy forces. This confirmed our hypothesis that changes in gas properties were directly altering the fundamental flow regime.
           </p>
 
-          <!-- Figure 3: Re/Ra trend -->
-          <figure class="my-8">
-            <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+3:+Re+and+Ra+vs+Substitution" alt="Line plots of injection Re and Ra vs gas substitution fraction" class="rounded-lg border w-full">
-            <figcaption class="image-caption">Figure 3. Ar≈N₂ maintain high Re/Ra (long jet, strong buoyancy). He and H₂ reduce both (shorter jet, weaker buoyancy).</figcaption>
-          </figure>
-
-          <h3>CFD insights: where growth actually happens</h3>
+          <h3>CFD Insights: Visualizing the Growth Zone</h3>
           <p>
-            CFD shows a central cold jet and a large axial recirculation cell. Overlap between the two governs growth. With He (lower density),
-            the jet shortens and the overlap shrinks. With H₂, the flow looks similar to He but chemistry suppresses reactive carbon species.
+            Computational Fluid Dynamics (CFD) simulations provided a clear picture of the reactor's interior. The maps revealed a cold, high-velocity jet down the centerline surrounded by a large, hot recirculation cell along the walls. The "sweet spot" for CNT growth is the shear layer between these two zones. With Helium, the jet visibly shortened, shrinking this productive interface. With Hydrogen, the flow map was similar to Helium, but chemical simulations showed a quenching of key growth precursors (like methyl radicals) in the reaction zone.
           </p>
 
-          <!-- Figure 4: velocity + temperature map -->
-          <figure class="my-8">
-            <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+4:+CFD+Velocity+and+Temperature+Maps" alt="CFD map showing jet, wall recirculation, and hot/cold regions" class="rounded-lg border w-full">
-            <figcaption class="image-caption">Figure 4. CFD velocity/temperature maps: the productive zone is the jet–recirculation interface.</figcaption>
-          </figure>
-
-          <h3>Jet length as the tipping point</h3>
+          <h3>Jet Length as the Critical Parameter</h3>
           <p>
-            Productivity tracks <strong>jet length</strong>. Once Re falls below ≈260 (e.g., high He), jet length drops below a threshold and conversion falls.
-            With H₂, the same transport penalty is compounded by chemistry (quenching methyl radicals), driving conversion near zero at high H₂/CH₄.
+            Ultimately, productivity tracked one key parameter: <strong>mixed jet length</strong>. Our results showed a clear threshold. Once the injection Reynolds number ($Re$) fell below ≈260 (as it did with high Helium fractions), the jet length collapsed, and conversion fell sharply. This demonstrates that for a given chemistry, maintaining a sufficiently long jet is the primary requirement for high-yield synthesis in a DI-FCCVD reactor.
           </p>
-
-          <!-- Figure 5: conversion vs jet length -->
-          <figure class="my-8">
-            <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+5:+Conversion+vs+Jet+Length" alt="Scatter or line showing conversion rising with mixed jet length, then falling below a threshold" class="rounded-lg border w-full">
-            <figcaption class="image-caption">Figure 5. Conversion vs. mixed jet length: a clear threshold behavior.</figcaption>
-          </figure>
 
           <h3>Takeaways</h3>
           <ul>
-            <li><strong>Transport matters:</strong> Gas density/viscosity/thermal conductivity set jet momentum and buoyancy.</li>
-            <li><strong>Flow + chemistry must align:</strong> Even a good flow regime fails if chemistry suppresses precursors (high H₂).</li>
+            <li><strong>Transport is paramount:</strong> The physical properties of the carrier gas (density, viscosity, thermal conductivity) are not passive variables; they actively shape the flow field that enables or disables growth.</li>
+            <li><strong>Flow and chemistry must align:</strong> An ideal flow regime is necessary but not sufficient. If the gas chemistry actively suppresses growth precursors (as with high H₂ concentrations), even a perfect flow structure will fail.</li>
           </ul>
 
           <p class="mt-6">
@@ -488,7 +463,6 @@
     </details>
   </div>
 </div>
-
                 <!-- Add more full articles here -->
 
             </div>
