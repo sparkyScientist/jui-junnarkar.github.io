@@ -145,15 +145,17 @@
                             <a href="#" onclick="showPost('post-analyzer-article')" class="text-blue-600 font-semibold hover:underline self-start">Read More &rarr;</a>
                         </div>
                     </div>
+                    
                     <!-- Post Card 2 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 flex flex-col">
-                        <img src="https://placehold.co/800x400/e2e8f0/334155?text=CFD+Simulation" alt="CFD Simulation" class="w-full h-48 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold mb-2">Optimizing Carbon Nanotube Synthesis</h3>
-                            <p class="text-gray-600 mb-4 flex-grow">Developing computational models to enhance Floating Catalyst Chemical Vapor Deposition (FCCVD).</p>
-                            <a href="#" onclick="showPost('post-fccvd-article')" class="text-blue-600 font-semibold hover:underline self-start">Read More &rarr;</a>
-                        </div>
-                    </div>
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+  <img src="https://placehold.co/1200x600/e2e8f0/334155?text=Deep+Injection+FCCVD" alt="Deep injection FCCVD schematic teaser" class="w-full h-64 object-cover">
+  <div class="p-8">
+    <h3 class="text-3xl font-bold mb-2">Cracking the Code of CNT Growth</h3>
+    <p class="text-lg text-gray-600 mb-6">How jet momentum and recirculation shape CNT growth in deep-injection FCCVD — with a short read and an optional deep dive.</p>
+    <a href="#" onclick="viewPost('post-di-cnt-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+  </div>
+</div>
+
                 </div>
             </div>
         </section>
@@ -210,14 +212,16 @@
                         </div>
                     </div>
                     <!-- Post Card 2 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
-                        <img src="https://placehold.co/800x400/e2e8f0/334155?text=CFD+Simulation" alt="CFD Simulation" class="w-full h-64 object-cover">
-                        <div class="p-8">
-                            <h3 class="text-3xl font-bold mb-2">Optimizing Carbon Nanotube Synthesis</h3>
-                            <p class="text-lg text-gray-600 mb-6">Developing computational models to enhance Floating Catalyst Chemical Vapor Deposition (FCCVD).</p>
-                            <a href="#" onclick="viewPost('post-fccvd-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
-                        </div>
-                    </div>
+                   
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+  <img src="https://placehold.co/1200x600/e2e8f0/334155?text=Deep+Injection+FCCVD" alt="Deep injection FCCVD schematic teaser" class="w-full h-64 object-cover">
+  <div class="p-8">
+    <h3 class="text-3xl font-bold mb-2">Cracking the Code of CNT Growth</h3>
+    <p class="text-lg text-gray-600 mb-6">How jet momentum and recirculation shape CNT growth in deep-injection FCCVD — with a short read and an optional deep dive.</p>
+    <a href="#" onclick="viewPost('post-di-cnt-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+  </div>
+</div>
+
                     <!-- Add more post cards here -->
                 </div>
             </div>
@@ -347,20 +351,144 @@
                     </div>
                 </div>
 
-                <!-- Full Article 2: FCCVD Research -->
-                <div id="post-fccvd-article" class="full-post bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200" style="display: none;">
-                    <div class="p-8">
-                        <p class="text-sm text-gray-500 mb-2">Ph.D. Research</p>
-                        <h3 class="text-3xl font-bold mb-2">Optimizing Carbon Nanotube Synthesis via Multiphysics Modeling</h3>
-                        <p class="text-lg text-gray-600 mb-6">Developing computational models to enhance Floating Catalyst Chemical Vapor Deposition (FCCVD).</p>
-                        <img src="https://placehold.co/800x400/e2e8f0/334155?text=CFD+Simulation" alt="CFD Simulation" class="rounded-lg mb-6 w-full">
-                        <div class="space-y-4 text-gray-700 leading-relaxed">
-                            <p>My doctoral research focuses on optimizing the synthesis of Carbon Nanotubes (CNTs) in FCCVD reactors. By developing multi-physics computational models in OpenFOAM and COMSOL, I simulate the complex interplay of fluid dynamics, heat transfer, mass transfer, and aerosol dynamics within the reactor.</p>
-                            <p>These model-guided insights allow for targeted experimental design and process optimization. A key achievement has been engineering a custom Deep Injection FCCVD setup, which, validated by my computational predictions, led to a <strong>30% increase in carbon conversion</strong> during material synthesis.</p>
-                            <p>This work combines fundamental science with practical engineering to create more efficient and scalable methods for producing advanced materials.</p>
-                        </div>
-                    </div>
-                </div>
+                
+                <!-- Full Article 3: Deep Injection FCCVD (short + deep dive) -->
+<div id="post-di-cnt-article" class="full-post bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200" style="display:none;">
+  <div class="p-8">
+    <button onclick="viewPostList()" class="mb-6 text-blue-600 font-semibold hover:underline">&larr; Back to All Posts</button>
+
+    <!-- Header -->
+    <header class="mb-8">
+      <p class="text-sm text-gray-500 mb-2">Ph.D. Research · Carbon Nanotubes · FCCVD</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+        Cracking the Code of CNT Growth: How Transport Phenomena Shape Deep-Injection Reactors
+      </h1>
+      <p class="mt-4 text-xl text-gray-600">
+        A short, approachable read with the big aha moments — plus an optional deep dive with flow maps and dimensionless numbers.
+      </p>
+      <div class="mt-4 text-gray-500">Published on: <time datetime="2025-08-20">August 20, 2025</time></div>
+    </header>
+
+    <!-- SHORT VERSION (3–5 min read) -->
+    <article class="prose lg:prose-xl max-w-none">
+      <section class="mb-10">
+        <p>
+          When I started working on carbon nanotube (CNT) synthesis, one question kept coming up:
+          <em>why are we still struggling to make CNTs efficiently at large scale, despite two decades of research?</em>
+        </p>
+        <p>
+          Most CNTs are grown by floating catalyst chemical vapor deposition (FCCVD). Inside the reactor, gases don’t flow neatly —
+          they swirl and recirculate, creating hot and cold pockets. That decides whether catalyst particles stay “just the right size”
+          to grow CNTs, or clump and deactivate.
+        </p>
+        <p>
+          <strong>Deep injection (DI)</strong> changes the picture: instead of feeding gases from the front (where they get trapped), we inject them
+          deeper into the hot zone through a narrow tube. This launches a fast, cold jet down the center that collides with hot
+          recirculating gases along the walls. <strong>That overlap is where CNTs grow best.</strong>
+        </p>
+      </section>
+
+      <!-- Figure 1: Schematic -->
+      <figure class="my-8">
+        <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+1:+Conventional+FCCVD+vs+Deep+Injection+(schematic)" alt="Schematic comparing conventional FCCVD entrance recirculation vs deep-injection jet overlapping with wall recirculation" class="rounded-lg border w-full">
+        <figcaption class="image-caption">Figure 1. Conventional FCCVD (left) vs. Deep Injection (right). DI launches a central jet that meets hot wall recirculation — the sweet spot for CNT growth.</figcaption>
+      </figure>
+
+      <section class="grid md:grid-cols-3 gap-4 my-10">
+        <div class="metric-card">
+          <div class="text-3xl font-extrabold">~13%</div>
+          <div class="text-gray-600">CH₄ conversion</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-3xl font-extrabold">&gt;90%</div>
+          <div class="text-gray-600">CNT selectivity</div>
+        </div>
+        <div class="metric-card">
+          <div class="text-3xl font-extrabold">~430 mg/h</div>
+          <div class="text-gray-600">Productivity</div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2>What happens when you change the gases?</h2>
+        <ul>
+          <li><strong>Argon ↔ Nitrogen:</strong> No real change (similar transport properties).</li>
+          <li><strong>Helium:</strong> Lighter → shortens the jet → below ~30% He, OK; past that, productivity drops.</li>
+          <li><strong>Hydrogen:</strong> Same transport effect as He <em>plus</em> chemistry: at high H₂/CH₄, it suppresses active carbon species and growth collapses.</li>
+        </ul>
+      </section>
+
+      <!-- Figure 2: Simple result plot -->
+      <figure class="my-8">
+        <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+2:+Conversion/Productivity+vs+Gas+Substitution" alt="Plot showing flat trend for N2, gradual drop for He beyond ~30%, sharp crash for high H2 fraction" class="rounded-lg border w-full">
+        <figcaption class="image-caption">Figure 2. N₂: flat. He: drop beyond ~30%. H₂: sharp crash at high ratios (transport + chemistry).</figcaption>
+      </figure>
+
+      <p class="mt-6">
+        <strong>Aha:</strong> Growth doesn’t happen everywhere — it happens where the <em>cold jet</em> meets <em>hot recirculation</em>.
+        Transport decides if that overlap exists. Chemistry decides if it’s useful.
+      </p>
+    </article>
+
+    <!-- DEEP DIVE (collapsible) -->
+    <details class="mt-12 group">
+      <summary class="cursor-pointer select-none list-none flex items-center justify-between bg-indigo-50 border border-indigo-200 rounded-xl px-5 py-4 hover:bg-indigo-100">
+        <span class="font-semibold text-indigo-900">Deep Dive: Flow maps, dimensionless numbers, and why jet length rules</span>
+        <svg class="w-5 h-5 text-indigo-700 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+      </summary>
+      <div class="px-1 md:px-2 lg:px-3 py-6">
+        <article class="prose lg:prose-xl max-w-none">
+          <h3>Transport framework: Re &amp; Ra</h3>
+          <p>
+            We quantify the jet/recirculation regime using <strong>Reynolds (Re)</strong> for jet momentum and <strong>Rayleigh (Ra)</strong> for buoyancy-driven convection,
+            evaluated at the cannula exit (simulation-derived injection temperature).
+          </p>
+
+          <!-- Figure 3: Re/Ra trend -->
+          <figure class="my-8">
+            <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+3:+Re+and+Ra+vs+Substitution" alt="Line plots of injection Re and Ra vs gas substitution fraction" class="rounded-lg border w-full">
+            <figcaption class="image-caption">Figure 3. Ar≈N₂ maintain high Re/Ra (long jet, strong buoyancy). He and H₂ reduce both (shorter jet, weaker buoyancy).</figcaption>
+          </figure>
+
+          <h3>CFD insights: where growth actually happens</h3>
+          <p>
+            CFD shows a central cold jet and a large axial recirculation cell. Overlap between the two governs growth. With He (lower density),
+            the jet shortens and the overlap shrinks. With H₂, the flow looks similar to He but chemistry suppresses reactive carbon species.
+          </p>
+
+          <!-- Figure 4: velocity + temperature map -->
+          <figure class="my-8">
+            <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+4:+CFD+Velocity+and+Temperature+Maps" alt="CFD map showing jet, wall recirculation, and hot/cold regions" class="rounded-lg border w-full">
+            <figcaption class="image-caption">Figure 4. CFD velocity/temperature maps: the productive zone is the jet–recirculation interface.</figcaption>
+          </figure>
+
+          <h3>Jet length as the tipping point</h3>
+          <p>
+            Productivity tracks <strong>jet length</strong>. Once Re falls below ≈260 (e.g., high He), jet length drops below a threshold and conversion falls.
+            With H₂, the same transport penalty is compounded by chemistry (quenching methyl radicals), driving conversion near zero at high H₂/CH₄.
+          </p>
+
+          <!-- Figure 5: conversion vs jet length -->
+          <figure class="my-8">
+            <img src="https://placehold.co/1200x560/fff/94a3b8?text=Figure+5:+Conversion+vs+Jet+Length" alt="Scatter or line showing conversion rising with mixed jet length, then falling below a threshold" class="rounded-lg border w-full">
+            <figcaption class="image-caption">Figure 5. Conversion vs. mixed jet length: a clear threshold behavior.</figcaption>
+          </figure>
+
+          <h3>Takeaways</h3>
+          <ul>
+            <li><strong>Transport matters:</strong> Gas density/viscosity/thermal conductivity set jet momentum and buoyancy.</li>
+            <li><strong>Flow + chemistry must align:</strong> Even a good flow regime fails if chemistry suppresses precursors (high H₂).</li>
+          </ul>
+
+          <p class="mt-6">
+            Full paper: <a class="text-blue-600 hover:underline" href="https://doi.org/10.1016/j.carbon.2025.120259" target="_blank" rel="noopener">Carbon (2025) 238:120259</a>
+          </p>
+        </article>
+      </div>
+    </details>
+  </div>
+</div>
+
                 <!-- Add more full articles here -->
 
             </div>
