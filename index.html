@@ -22,67 +22,24 @@
 
   gtag('config', 'G-62C8SV662X');
 </script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+<script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         /* Simple animation for page sections */
-        .page-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            display: none; /* Initially hide all sections */
-        }
-        .page-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-            display: block; /* Show the visible section */
-        }
-        .hero-bg {
-            /* Replace with your desired background image URL */
-            background-image: url('https://i.postimg.cc/Twk8Mz4Y/IMG-6438.avif');
-            background-size: cover;
-            background-position: center;
-        }
-        .about-hero-bg {
-             /* Replace with your desired background image URL for the About page */
-            background-image: url('https://i.postimg.cc/nLYTNqPH/IMG-4419.avif');
-            background-size: cover;
-            background-position: center 45%;;
-        }
-        /* Style for the active navigation link */
-        .nav-active {
-            color: #2563EB; /* blue-600 */
-            font-weight: 500;
-        }
-        /* Additional styles for the new blog post format */
-        .tag {
-            display: inline-block;
-            background-color: #e0e7ff;
-            color: #3730a3;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .metric-card {
-            background-color: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        .image-caption {
-            text-align: center;
-            font-size: 0.875rem;
-            color: #6b7280;
-            margin-top: 0.5rem;
-        }
+        .page-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; display: none; }
+        .page-section.is-visible { opacity: 1; transform: translateY(0); display: block; }
+        .hero-bg { background-image: url('https://i.postimg.cc/Twk8Mz4Y/IMG-6438.avif'); background-size: cover; background-position: center; }
+        .about-hero-bg { background-image: url('https://i.postimg.cc/nLYTNqPH/IMG-4419.avif'); background-size: cover; background-position: center 45%; }
+        /* Active nav */
+        .nav-active { color: #2563EB; font-weight: 500; }
+        /* Blog helpers */
+        .tag { display: inline-block; background-color: #e0e7ff; color: #3730a3; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .metric-card { background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; text-align: center; transition-transform: transform 0.2s; }
+        .metric-card:hover { transform: scale(1.05); }
+        .image-caption { text-align: center; font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem; }
+        .insight-quote { border-left: 4px solid #4f46e5; padding-left: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; font-style: italic; color: #374151; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -102,7 +59,7 @@
                 </nav>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none" aria-label="Open menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                 </div>
@@ -116,7 +73,6 @@
             <a href="#" onclick="showSection('about'); toggleMenu();" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
         </div>
     </header>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <!-- Main Content -->
     <main>
@@ -148,17 +104,17 @@
                     </div>
                     
                     <!-- Post Card 2 -->
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
-  <img src="https://i.imgur.com/gK6fDk7.png"
-       alt="Schematic comparing conventional and deep-injection FCCVD for CNT growth"
-       class="w-full h-64 object-contain bg-gray-50"
-       loading="lazy" decoding="async">
-  <div class="p-8">
-    <h3 class="text-3xl font-bold mb-2">Cracking the Code of CNT Growth</h3>
-    <p class="text-lg text-gray-600 mb-6">How transport phenomena in deep-injection reactors dictate catalyst lifetime and unlock high-yield carbon nanotube synthesis.</p>
-    <a href="#" onclick="viewPost('post-di-cnt-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
-  </div>
-</div>
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 flex flex-col">
+                      <img src="https://i.imgur.com/gK6fDk7.png"
+                           alt="Schematic comparing conventional and deep-injection FCCVD for CNT growth"
+                           class="w-full h-48 object-contain bg-gray-50"
+                           loading="lazy" decoding="async">
+                      <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-bold mb-2">Cracking the Code of CNT Growth</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">How jet length and wall-recirculation overlap drive CNT yield in deep-injection FCCVD.</p>
+                        <a href="#" onclick="showPost('post-di-cnt-article')" class="text-blue-600 font-semibold hover:underline self-start">Read More &rarr;</a>
+                      </div>
+                    </div>
 
                 </div>
             </div>
@@ -216,17 +172,14 @@
                         </div>
                     </div>
                     <!-- Post Card 2 -->
-                   
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
-  <img src="https://placehold.co/1200x600/e2e8f0/334155?text=Deep+Injection+FCCVD" alt="Deep injection FCCVD schematic teaser" class="w-full h-64 object-cover">
-  <div class="p-8">
-    <h3 class="text-3xl font-bold mb-2">Cracking the Code of CNT Growth</h3>
-    <p class="text-lg text-gray-600 mb-6">How jet momentum and recirculation shape CNT growth in deep-injection FCCVD — with a short read and an optional deep dive.</p>
-    <a href="#" onclick="viewPost('post-di-cnt-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
-  </div>
-</div>
-
-                    <!-- Add more post cards here -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                        <img src="https://i.imgur.com/gK6fDk7.png" alt="Deep injection FCCVD schematic" class="w-full h-64 object-contain bg-gray-50" loading="lazy" decoding="async">
+                        <div class="p-8">
+                            <h3 class="text-3xl font-bold mb-2">Cracking the Code of CNT Growth</h3>
+                            <p class="text-lg text-gray-600 mb-6">How jet length and wall-recirculation overlap drive CNT yield in deep-injection FCCVD.</p>
+                            <a href="#" onclick="viewPost('post-di-cnt-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -236,213 +189,223 @@
                 
                 <!-- Full Article 1: TEM AI Catalyst Analyzer -->
                 <div id="post-analyzer-article" class="full-post bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200" style="display: none;">
-    <div class="p-8">
-        <article class="prose lg:prose-xl max-w-none">
-
-            <!-- Post Header -->
-            <!-- Post Header -->
-<header class="mb-12 border-b pb-8">
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Automating Catalyst Characterization: An AI-Powered Tool for TEM Particle Size Analysis</h1>
-    <p class="mt-4 text-xl text-gray-600">A walk through how I built a custom computer vision tool, starting with painstaking data annotation and ending with a working desktop app that makes TEM particle measurements fast and reliable.</p>
-    <div class="mt-6">
-        <span class="text-gray-500">Published on: August 19, 2025</span>
-    </div>
-</header>
-
-<!-- The Problem Section -->
-<section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4">The High Cost of a Simple Question</h2>
-    <p class="text-lg leading-relaxed mb-4">
-        In materials science, a deceptively simple question shapes the outcome of an experiment: “What is the size distribution of my nanoparticles?” Transmission Electron Microscopy (TEM) images hold that answer, but turning those images into meaningful numbers has long been a frustrating bottleneck.
-    </p>
-    <p class="text-lg leading-relaxed">
-        Manually outlining hundreds of particles is not only slow, it also introduces inconsistency. Results vary depending on who’s doing the tracing, making the data less reliable. I built this tool to get around that barrier: replacing a time-consuming, error-prone process with one that is objective, automated, and dramatically faster.
-    </p>
-</section>
-
-<!-- The Workflow Section -->
-<section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4">The Development Journey: A Three-Step Process</h2>
-
-    <div class="mt-8">
-        <h3 class="text-2xl font-semibold mb-2">Step 1: Teaching the AI with Professional Tools</h3>
-        <p class="text-lg leading-relaxed mb-4">
-            An AI model is only as good as the data it learns from. To build a solid foundation, I turned to <strong>Roboflow</strong>, a platform for managing computer vision datasets. I uploaded 80 TEM images covering the range of our samples, from 5 nm to 50 nm scale bars, and drew polygon masks around several thousand particles. Roboflow’s annotation and versioning tools streamlined the process, and just as importantly, made sure the dataset was clean and reproducible.
-        </p>
-
-        <!-- IMAGE PLACEHOLDER 1 -->
-        <div class="my-8">
-            <img src="https://i.postimg.cc/L43Vph1x/Annotated-data.png" alt="Side-by-side comparison of a raw TEM image and the same image with manual annotations" class="rounded-lg border">
-            <p class="image-caption">Left: a raw TEM image. Right: the same image annotated in Roboflow, with each particle outlined by hand.</p>
-        </div>
-    </div>
-
-    <div class="mt-12">
-        <h3 class="text-2xl font-semibold mb-2">Step 2: Training a "Specialist" Model in the Cloud</h3>
-        <p class="text-lg leading-relaxed mb-4">
-            Training a deep learning model takes a lot of computing power. To get access to GPUs without the price tag, I used Google Colab and the Detectron2 framework. Detectron2’s Mask R-CNN architecture is well-suited for instance segmentation, identifying and outlining individual objects in an image.
-        </p>
-        <p class="text-lg leading-relaxed mb-4">
-            I fine-tuned the model on my annotated dataset until it could reliably pick out particles on images it had never seen before. The trained network was then saved into a single portable file, <code>model_final.pth</code>, which became the core “brain” of the application.
-        </p>
-
-        <!-- IMAGE PLACEHOLDER 2 -->
-        <div class="my-8">
-            <img src="https://i.postimg.cc/1XmwtcqJ/model-predicted-data.png" alt="The trained AI model identifying particles on a new TEM image" class="rounded-lg border">
-            <p class="image-caption">The trained model applied to a new TEM image: particles automatically identified and segmented.</p>
-        </div>
-    </div>
-
-    <div class="mt-12">
-        <h3 class="text-2xl font-semibold mb-2">Step 3: From a Model File to an Intuitive Desktop App</h3>
-        <p class="text-lg leading-relaxed">
-            A model file on its own isn’t very practical for day-to-day lab work. The final step was building a simple desktop application in Python using Tkinter. This app acts as a wrapper around the AI model: it loads <code>model_final.pth</code>, processes the user’s TEM images, runs predictions, and turns the raw segmentation masks into useful outputs like particle diameters, summary statistics, and histograms. What used to be a command-line workflow is now point-and-click.
-        </p>
-    </div>
-</section>
-
-<!-- App in Action Section -->
-<section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4">The Application in Action</h2>
-    <p class="text-lg leading-relaxed mb-8">
-        In practice, the workflow is straightforward: select a folder of images, set the scale with two clicks, and press “Analyze.” Within seconds, the app generates side-by-side images for review, real-time stats like mean and standard deviation, and a particle size distribution histogram. If the AI mislabels something, it can be corrected with a click, and all results update instantly. Exporting the data is just as quick.
-    </p>
-
-    <!-- VIDEO/GIF PLACEHOLDER -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/CMIcvvrr1Os?si=Hh0Pfk-wD5tQF4oS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</section>
-
-<!-- Challenges and Solutions Section -->
-<section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4">Challenges & Solutions</h2>
-    <p class="text-lg leading-relaxed mb-6">Like any AI model, this one has its limitations. The key was to acknowledge them and design the app so they didn’t get in the way of reliable results.</p>
-
-    <div class="space-y-8">
-        <div>
-            <h3 class="text-2xl font-semibold mb-2">Challenge 1: False Positives</h3>
-            <p class="text-lg leading-relaxed">
-                Occasionally the AI confuses the carbon support film or an imaging artifact for a particle. To catch these cases, I added a quick review step: users can click any incorrectly identified particle to remove it, with all plots and stats updating in real time.
-            </p>
-        </div>
-
-        <div>
-            <h3 class="text-2xl font-semibold mb-2">Challenge 2: Overlapping Particles</h3>
-            <p class="text-lg leading-relaxed">
-                Dense, overlapping clusters are the hardest cases. The model sometimes merges particles together or misses a few. While it performs very well on dispersed samples, I’m planning to add a manual “draw your own mask” feature so users can quickly add particles the AI overlooks. This will make the tool more flexible for challenging datasets.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Technology Stack Section -->
-<section>
-    <h2 class="text-3xl font-bold mb-6">Technology Stack</h2>
-    <div class="flex flex-wrap">
-        <span class="tag">Python</span>
-        <span class="tag">PyTorch</span>
-        <span class="tag">Detectron2</span>
-        <span class="tag">Google Colab</span>
-        <span class="tag">Roboflow</span>
-        <span class="tag">OpenCV</span>
-        <span class="tag">Tkinter</span>
-        <span class="tag">Matplotlib</span>
-        <span class="tag">NumPy</span>
-    </div>
-</section>
-
-                        
+                    <div class="p-8">
+                        <article class="prose lg:prose-xl max-w-none">
+                            <!-- Post Header -->
+                            <header class="mb-12 border-b pb-8">
+                                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Automating Catalyst Characterization: An AI-Powered Tool for TEM Particle Size Analysis</h1>
+                                <p class="mt-4 text-xl text-gray-600">A walk through how I built a custom computer vision tool, starting with painstaking data annotation and ending with a working desktop app that makes TEM particle measurements fast and reliable.</p>
+                                <div class="mt-6">
+                                    <span class="text-gray-500">Published on: August 19, 2025</span>
+                                </div>
+                            </header>
+                            <!-- The Problem Section -->
+                            <section class="mb-12">
+                                <h2 class="text-3xl font-bold mb-4">The High Cost of a Simple Question</h2>
+                                <p class="text-lg leading-relaxed mb-4">
+                                    In materials science, a deceptively simple question shapes the outcome of an experiment: “What is the size distribution of my nanoparticles?” Transmission Electron Microscopy (TEM) images hold that answer, but turning those images into meaningful numbers has long been a frustrating bottleneck.
+                                </p>
+                                <p class="text-lg leading-relaxed">
+                                    Manually outlining hundreds of particles is not only slow, it also introduces inconsistency. Results vary depending on who’s doing the tracing, making the data less reliable. I built this tool to get around that barrier: replacing a time-consuming, error-prone process with one that is objective, automated, and dramatically faster.
+                                </p>
+                            </section>
+                            <!-- The Workflow Section -->
+                            <section class="mb-12">
+                                <h2 class="text-3xl font-bold mb-4">The Development Journey: A Three-Step Process</h2>
+                                <div class="mt-8">
+                                    <h3 class="text-2xl font-semibold mb-2">Step 1: Teaching the AI with Professional Tools</h3>
+                                    <p class="text-lg leading-relaxed mb-4">
+                                        An AI model is only as good as the data it learns from. To build a solid foundation, I turned to <strong>Roboflow</strong>, a platform for managing computer vision datasets. I uploaded 80 TEM images covering the range of our samples, from 5 nm to 50 nm scale bars, and drew polygon masks around several thousand particles. Roboflow’s annotation and versioning tools streamlined the process, and just as importantly, made sure the dataset was clean and reproducible.
+                                    </p>
+                                    <div class="my-8">
+                                        <img src="https://i.postimg.cc/L43Vph1x/Annotated-data.png" alt="Side-by-side comparison of a raw TEM image and the same image with manual annotations" class="rounded-lg border">
+                                        <p class="image-caption">Left: a raw TEM image. Right: the same image annotated in Roboflow, with each particle outlined by hand.</p>
+                                    </div>
+                                </div>
+                                <div class="mt-12">
+                                    <h3 class="text-2xl font-semibold mb-2">Step 2: Training a "Specialist" Model in the Cloud</h3>
+                                    <p class="text-lg leading-relaxed mb-4">
+                                        Training a deep learning model takes a lot of computing power. To get access to GPUs without the price tag, I used Google Colab and the Detectron2 framework. Detectron2’s Mask R-CNN architecture is well-suited for instance segmentation, identifying and outlining individual objects in an image.
+                                    </p>
+                                    <p class="text-lg leading-relaxed mb-4">
+                                        I fine-tuned the model on my annotated dataset until it could reliably pick out particles on images it had never seen before. The trained network was then saved into a single portable file, <code>model_final.pth</code>, which became the core “brain” of the application.
+                                    </p>
+                                    <div class="my-8">
+                                        <img src="https://i.postimg.cc/1XmwtcqJ/model-predicted-data.png" alt="The trained AI model identifying particles on a new TEM image" class="rounded-lg border">
+                                        <p class="image-caption">The trained model applied to a new TEM image: particles automatically identified and segmented.</p>
+                                    </div>
+                                </div>
+                                <div class="mt-12">
+                                    <h3 class="text-2xl font-semibold mb-2">Step 3: From a Model File to an Intuitive Desktop App</h3>
+                                    <p class="text-lg leading-relaxed">
+                                        A model file on its own isn’t very practical for day-to-day lab work. The final step was building a simple desktop application in Python using Tkinter. This app acts as a wrapper around the AI model: it loads <code>model_final.pth</code>, processes the user’s TEM images, runs predictions, and turns the raw segmentation masks into useful outputs like particle diameters, summary statistics, and histograms. What used to be a command-line workflow is now point-and-click.
+                                    </p>
+                                </div>
+                            </section>
+                            <!-- App in Action Section -->
+                            <section class="mb-12">
+                                <h2 class="text-3xl font-bold mb-4">The Application in Action</h2>
+                                <p class="text-lg leading-relaxed mb-8">
+                                    In practice, the workflow is straightforward: select a folder of images, set the scale with two clicks, and press “Analyze.” Within seconds, the app generates side-by-side images for review, real-time stats like mean and standard deviation, and a particle size distribution histogram. If the AI mislabels something, it can be corrected with a click, and all results update instantly. Exporting the data is just as quick.
+                                </p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/CMIcvvrr1Os?si=Hh0Pfk-wD5tQF4oS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </section>
+                            <!-- Challenges and Solutions Section -->
+                            <section class="mb-12">
+                                <h2 class="text-3xl font-bold mb-4">Challenges & Solutions</h2>
+                                <p class="text-lg leading-relaxed mb-6">Like any AI model, this one has its limitations. The key was to acknowledge them and design the app so they didn’t get in the way of reliable results.</p>
+                                <div class="space-y-8">
+                                    <div>
+                                        <h3 class="text-2xl font-semibold mb-2">Challenge 1: False Positives</h3>
+                                        <p class="text-lg leading-relaxed">
+                                            Occasionally the AI confuses the carbon support film or an imaging artifact for a particle. To catch these cases, I added a quick review step: users can click any incorrectly identified particle to remove it, with all plots and stats updating in real time.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl font-semibold mb-2">Challenge 2: Overlapping Particles</h3>
+                                        <p class="text-lg leading-relaxed">
+                                            Dense, overlapping clusters are the hardest cases. The model sometimes merges particles together or misses a few. While it performs very well on dispersed samples, I’m planning to add a manual “draw your own mask” feature so users can quickly add particles the AI overlooks. This will make the tool more flexible for challenging datasets.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- Technology Stack Section -->
+                            <section>
+                                <h2 class="text-3xl font-bold mb-6">Technology Stack</h2>
+                                <div class="flex flex-wrap">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">PyTorch</span>
+                                    <span class="tag">Detectron2</span>
+                                    <span class="tag">Google Colab</span>
+                                    <span class="tag">Roboflow</span>
+                                    <span class="tag">OpenCV</span>
+                                    <span class="tag">Tkinter</span>
+                                    <span class="tag">Matplotlib</span>
+                                    <span class="tag">NumPy</span>
+                                </div>
+                            </section>
                         </article>
                     </div>
                 </div>
 
+                <!-- Full Article 2: Deep Injection FCCVD -->
+                <div id="post-di-cnt-article" class="full-post bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200" style="display: none;">
+                    <div class="p-8 md:p-10 lg:p-12">
+                        <article class="prose lg:prose-xl max-w-none">
+                            <header class="mb-12 border-b pb-8">
+                                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Cracking the Code of CNT Growth: How Transport Phenomena Shape Deep-Injection Reactors</h1>
+                                <p class="mt-4 text-xl text-gray-600">Transport, not just chemistry: the jet–recirculation story behind CNT yield in DI-FCCVD.</p>
+                                <div class="mt-6">
+                                    <span class="text-gray-500">Published on: <time datetime="2025-08-20">August 20, 2025</time></span>
+                                </div>
+                            </header>
                 
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
-  <img src="https://i.imgur.com/gK6fDk7.png" alt="A schematic showing the difference between conventional and deep-injection FCCVD reactors for CNT growth." class="w-full h-64 object-cover">
-  <div class="p-8">
-    <h3 class="text-3xl font-bold mb-2">Cracking the Code of CNT Growth</h3>
-    <p class="text-lg text-gray-600 mb-6">How transport phenomena in deep-injection reactors dictate catalyst lifetime and unlock high-yield carbon nanotube synthesis.</p>
-    <a href="#" onclick="viewPost('post-di-cnt-article')" class="text-blue-600 font-semibold hover:underline">Read More &rarr;</a>
-  </div>
-</div>
-
-
-<!-- Full Article -->
-<div id="post-di-cnt-article" class="full-post bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200" style="display:none;">
-  <div class="p-8">
-    <button onclick="viewPostList()" class="mb-6 text-blue-600 font-semibold hover:underline" aria-label="Back to all posts">&larr; Back to All Posts</button>
-
-    <article class="prose lg:prose-xl max-w-none">
-      <!-- Header (match your first post style) -->
-      <header class="mb-12 border-b pb-8">
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Cracking the Code of CNT Growth</h1>
-        <p class="mt-4 text-xl text-gray-600">A deep dive into how transport phenomena govern deep-injection CVD, with an approachable summary and an optional technical breakdown.</p>
-        <div class="mt-6"><span class="text-gray-500">Published on: <time datetime="2025-08-20">August 20, 2025</time></span></div>
-      </header>
-
-      <!-- Short version -->
-      <section class="mb-10">
-        <p>When I began my Ph.D. research on carbon nanotube (CNT) synthesis, one question stood out: <em>why is it still so hard to make high-quality CNTs at scale?</em> After decades of research, the process often felt more like an art than a science.</p>
-        <p>The answer lies in the complex dance of gases inside the reactor. In conventional floating catalyst chemical vapor deposition (FCCVD), hot gases swirl and recirculate near the entrance, often deactivating catalyst particles before they can even start growing nanotubes.</p>
-        <p><strong>Deep injection (DI)</strong> flips the script. By injecting the catalyst and precursor gases through a long, cooled tube, we launch a stable, high-speed jet deep into the hot zone. This jet punches through recirculation and creates a well-defined reaction zone where the cold jet meets the hot reactor environment. <strong>This interface is the sweet spot for CNT growth.</strong></p>
-      </section>
-
-      <figure class="my-8">
-        <img src="https://i.imgur.com/gK6fDk7.png"
-             alt="Conventional FCCVD entrance recirculation vs deep-injection jet overlapping with wall recirculation"
-             class="rounded-lg border w-full"
-             loading="lazy" decoding="async">
-        <figcaption class="image-caption">Figure 1. Conventional FCCVD (left) often traps catalyst in a hot recirculation zone. Deep Injection (right) creates a stable central jet with a productive reaction interface.</figcaption>
-      </figure>
-
-      <section class="grid md:grid-cols-3 gap-4 my-10">
-        <div class="metric-card"><div class="text-3xl font-extrabold">~13%</div><div class="text-gray-600">CH₄ conversion</div></div>
-        <div class="metric-card"><div class="text-3xl font-extrabold">&gt;90%</div><div class="text-gray-600">CNT selectivity</div></div>
-        <div class="metric-card"><div class="text-3xl font-extrabold">~430 mg/h</div><div class="text-gray-600">Productivity</div></div>
-      </section>
-
-      <section class="mb-10">
-        <h2>A Tale of Four Gases</h2>
-        <p>To prove that the flow regime—not just the chemistry—was the key, we systematically swapped the primary carrier gas (argon) with others. Here’s what we found:</p>
-        <ul>
-          <li><strong>Argon ↔ Nitrogen:</strong> Virtually no change. Similar densities/thermal properties kept the flow structure intact.</li>
-          <li><strong>Helium:</strong> Much lighter → shortens the jet. OK up to ~30% He; past that, jet penetration falters and productivity drops.</li>
-          <li><strong>Hydrogen:</strong> Same transport effect as He <em>plus</em> chemistry: at high H₂/CH₄ it suppresses key carbon species, and growth collapses.</li>
-        </ul>
-        <p class="mt-6"><strong>Key takeaway:</strong> Growth happens where the <em>cold, stable jet</em> meets <em>hot recirculation</em>. Transport defines the zone; chemistry decides what happens inside it.</p>
-      </section>
-
-      <!-- Deep dive toggle (styled to match) -->
-      <details id="deep-dive" class="mt-12 group">
-        <summary class="cursor-pointer select-none list-none flex items-center justify-between bg-indigo-50 border border-indigo-200 rounded-xl px-5 py-4 hover:bg-indigo-100">
-          <span class="font-semibold text-indigo-900">Deep Dive: Flow maps, dimensionless numbers, and why jet length rules</span>
-          <svg class="w-5 h-5 text-indigo-700 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
-        </summary>
-        <div class="px-1 md:px-2 lg:px-3 py-6">
-          <h3>The transport framework: Reynolds and Rayleigh numbers</h3>
-          <p>We quantify the balance using <strong>Reynolds (Re)</strong> for jet momentum and <strong>Rayleigh (Ra)</strong> for buoyancy-driven convection, evaluated at the cannula exit (injection temperature from CFD). As argon is replaced by lighter gases (He, H₂), both Re and Ra drop → weaker jet and buoyancy.</p>
-
-          <h3>CFD insights: where growth actually happens</h3>
-          <p>CFD shows a cold centerline jet surrounded by a hot wall recirculation cell. The productive zone is the shear layer between them. With He, the jet shortens and the overlap shrinks. With H₂, the flow looks similar to He but chemistry quenches reactive carbon species.</p>
-
-          <h3>Jet length as the tipping point</h3>
-          <p>Productivity tracks <strong>mixed jet length</strong>. Once Re falls below ≈260 (e.g., high He), the jet no longer reaches the hot recirculation region and conversion falls sharply. With H₂, the same transport penalty is compounded by chemistry, pushing conversion near zero at high H₂/CH₄.</p>
-
-          <h3>Takeaways</h3>
-          <ul>
-            <li><strong>Transport is paramount:</strong> gas density/viscosity/thermal conductivity actively shape the flow field.</li>
-            <li><strong>Flow + chemistry must align:</strong> a good flow regime still fails if chemistry suppresses precursors (high H₂).</li>
-          </ul>
-
-          <p class="mt-6">Full paper: <a class="text-blue-600 hover:underline" href="https://doi.org/10.1016/j.carbon.2025.120259" target="_blank" rel="noopener">Carbon (2025) 238:120259</a></p>
-        </div>
-      </details>
-    </article>
-  </div>
-</div>
-                <!-- Add more full articles here -->
-
+                            <section class="mb-10">
+                                <p>When I started working on carbon nanotube (CNT) synthesis, one question kept coming up: <strong>why are we still struggling to make CNTs efficiently at large scale</strong>, despite two decades of research?</p>
+                                <p>CNTs themselves are extraordinary materials: stronger than steel, lighter than aluminum, more conductive than copper. If we could make them at scale, they could transform everything from aerospace to energy storage. The challenge lies getting them out of the lab and into reliable, high-yield production. Most CNTs today are grown by floating catalyst chemical vapor deposition (FCCVD), but the process has its bottlenecks:</p>
+                                <ul>
+                                    <li>Only a small fraction of catalyst particles ever grow CNTs.</li>
+                                    <li>Carbon conversion to CNTs is usually less than 1%.</li>
+                                    <li>Reactor flow patterns are messy, with swirling recirculation zones that trap catalysts in the wrong places.</li>
+                                </ul>
+                                <p>In other words, we don’t fully understand how transport phenomena, heat flow, gas flow, mixing, control CNT growth inside these reactors. That’s the gap we set out to tackle.</p>
+                            </section>
+                
+                            <section class="mb-10">
+                                <h2>The Deep-Injection Twist</h2>
+                                <p><strong>Deep Injection (DI)</strong> changes this story. Instead of feeding at the inlet, we inject the feed deep in the hot zone through a long, narrow cannula.
+                                
+                                    This long, thin injector launches a colder, high-velocity jet right into the heart of the reactor: the hot zone, setting up a very different flow pattern:</p>
+                                <ul>
+                                    <li>The cold injected jet moves axially down the center.</li>
+                                    <li>Hot recirculating gases swirl back upstream along the reactor walls.</li>
+                                    <li>Where they meet, at the interface between the jet and recirculation, is where CNTs grow best.</li>
+                                </ul>
+                                <blockquote class="insight-quote">
+                                    👉  Growth isn’t happening everywhere. It’s happening at the narrow collision zone between the cold jet and hot recirculation. If we can control that interface, we can control productivity.
+                                </blockquote>
+                            </section>
+                            
+                            <figure class="my-12">
+                                <img src="https://i.imgur.com/gK6fDk7.png" alt="Conventional FCCVD vs deep injection schematic" class="rounded-lg border w-full" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Not+Found';">
+                                <figcaption class="image-caption">Figure 1. Conventional FCCVD (left) traps catalyst in hot recirculation. Deep Injection (right) creates a stable central jet that forms a productive reaction interface with the hot gases.</figcaption>
+                            </figure>
+                
+                            <section class="mb-10">
+                                <h2>A Tale of Four Gases</h2>
+                                <p>How do the physical properties of the gases we use shape this jet/recirculation interaction? To isolate these effects, we designed a systematic study, replacing our argon carrier gas with nitrogen, helium, and hydrogen while keeping everything else constant.</p>
+                                
+                                <h3 class="mt-8 text-2xl font-bold">Argon vs. Nitrogen</h3>
+                                <p>As expected, Ar and N₂ behaved almost identically. Their similar transport properties meant that swapping them didn't change flow patterns or CNT growth, confirming our experiment was sensitive to gas properties, not random noise.</p>
+                                
+                                <h3 class="mt-8 text-2xl font-bold">Helium: A Transport Story</h3>
+                                <p>Helium was the first real surprise. Because it’s so light and diffusive, the jet lost momentum and shortened as we added more. Once the Reynolds number (a measure of jet momentum) dipped below a threshold of ≈260, methane conversion fell sharply.</p>
+                                <blockquote class="insight-quote">
+                                    👉 <strong>Aha moment:</strong> There’s a transport tipping point. Below a critical Reynolds number, the jet can no longer sustain itself to reach the productive zone, and the reactor's efficiency collapses.
+                                </blockquote>
+                
+                                <h3 class="mt-8 text-2xl font-bold">Hydrogen: A Chemistry Story</h3>
+                                <p>Hydrogen has similar transport properties to helium, but it added a chemical twist. At low concentrations, H₂ improved selectivity. But as the H₂/CH₄ ratio climbed, it began quenching the active carbon species needed for growth. At full H₂ substitution, methane conversion collapsed from ~13% to just 0.17%—an 80-fold decrease.</p>
+                                <blockquote class="insight-quote">
+                                    👉 <strong>Aha moment:</strong> Flow alone isn’t enough. Even a “perfect” jet couldn’t save CNT growth when the chemistry was wrong.
+                                </blockquote>
+                            </section>
+                            
+                            <figure class="my-12">
+                                <img src="https://i.imgur.com/w3n761M.png" alt="Graph of CNT productivity with different carrier gases" class="rounded-lg border w-full" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/475569?text=Image+Not+Found';">
+                                <figcaption class="image-caption">Figure 2. CNT productivity remained stable when swapping Ar for N₂, dropped when the He concentration was high, and crashed with excess H₂.</figcaption>
+                            </figure>
+                
+                            <section class="mb-10">
+                                <h2>The Sweet Spot</h2>
+                                <p>When the physics and chemistry aligned, our deep-injection reactor achieved performance metrics among the highest reported for FCCVD systems, proving that controlling transport phenomena is key to unlocking high efficiency.</p>
+                                <div class="grid md:grid-cols-3 gap-6 my-8">
+                                    <div class="metric-card"><div class="text-4xl font-extrabold text-indigo-600">~13%</div><div class="mt-1 text-gray-600">Methane conversion</div></div>
+                                    <div class="metric-card"><div class="text-4xl font-extrabold text-indigo-600">&gt;90%</div><div class="mt-1 text-gray-600">CNT selectivity</div></div>
+                                    <div class="metric-card"><div class="text-4xl font-extrabold text-indigo-600">~430 mg/h</div><div class="mt-1 text-gray-600">Productivity</div></div>
+                                </div>
+                            </section>
+                
+                            <section>
+                                <h2>Why This Matters</h2>
+                                <p>This study provides two critical lessons for reactor design. First, <strong>transport is central</strong>; reactor gases are not passive carriers but active agents that shape the entire flow field. Second, <strong>flow and chemistry must align</strong>. Instead of tweaking recipes blindly, we can now design FCCVD reactors where flow, heat, and chemistry are tuned together. That’s the step we need if CNTs are ever going to move from labs into real-world, large-scale applications.</p>
+                            </section>
+                
+                            <details id="deep-dive" class="mt-12 group bg-gray-50 rounded-xl border border-gray-200">
+                                <summary class="cursor-pointer select-none list-none flex items-center justify-between px-5 py-4 hover:bg-gray-100 rounded-t-xl">
+                                    <span class="font-semibold text-gray-800">Deep Dive: Flow maps, dimensionless numbers, and CFD insights</span>
+                                    <svg class="w-5 h-5 text-gray-600 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+                                </summary>
+                                <div class="px-5 md:px-6 lg:px-7 py-6 border-t border-gray-200">
+                                    <h3>The Transport Framework: Reynolds and Rayleigh Numbers</h3>
+                                    <p>To quantify the balance of forces, we used dimensionless numbers. The <strong>Reynolds number (Re)</strong> measures jet momentum versus viscous dissipation, while the <strong>Rayleigh number (Ra)</strong> measures buoyancy-driven convection versus diffusion. As we replaced argon with lighter gases like He and H₂, both Re and Ra dropped, indicating a weaker jet that was less able to penetrate the hot reactor environment.</p>
+                
+                                    <figure class="my-8">
+                                        <img src="https://i.imgur.com/7r20h4f.png" alt="CFD simulation of deep injection reactor" class="rounded-lg border w-full" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/600x300/e2e8f0/475569?text=Image+Not+Found';">
+                                        <figcaption class="image-caption">Figure 3. CFD simulations reveal the cold central jet (blue) and the hot wall recirculation (red), with CNT growth occurring in the shear layer between them.</figcaption>
+                                    </figure>
+                                    
+                                    <h3>CFD Insights: Seeing Inside the Reactor</h3>
+                                    <p>Computational fluid dynamics (CFD) simulations confirmed our hypothesis. In our baseline case, the jet extended nearly half a meter, creating a large, productive overlap with the hot recirculation cell. With He or H₂, the jet shortened, the recirculation shrank, and this vital overlap region diminished significantly, starving the reaction.</p>
+                
+                                    <h3>Key Takeaways</h3>
+                                    <ul>
+                                        <li><strong>Transport is paramount:</strong> Gas properties (density, viscosity, thermal conductivity) actively shape the flow field and determine where—or if—a productive reaction zone can form.</li>
+                                        <li><strong>Flow and chemistry must align:</strong> An optimal flow regime will still fail if the chemical environment suppresses the necessary precursor species, as seen in the high-hydrogen case.</li>
+                                    </ul>
+                
+                                    <p class="mt-6">This work demonstrates that reactor performance can be understood and systematically improved by applying fundamental principles of fluid mechanics and heat transfer.</p>
+                
+                                    <p class="mt-8 font-semibold">Full paper: <a class="text-blue-600 hover:underline" href="https://doi.org/10.1016/j.carbon.2025.120259" target="_blank" rel="noopener">Understanding the effect of transport phenomena in deep-injection FCCVD CNT synthesis, Carbon (2025) 238:120259</a></p>
+                                </div>
+                            </details>
+                
+                        </article>
+                    </div>
+                </div>
             </div>
         </section>
+
 
         <!-- About Section -->
         <section id="about" class="page-section">
@@ -460,22 +423,16 @@
             <div class="max-w-4xl mx-auto px-6 py-12">
                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 -mt-32 relative z-10">
                     <div class="text-lg text-gray-700 leading-relaxed space-y-4">
-                        <p>
-                            I am a Ph.D. Candidate in Chemical and Biomolecular Engineering at Rice University with a deep interest in leveraging technology to solve real-world scientific problems. My background is in Chemical Engineering, and through my doctoral research, I've developed a strong expertise in computational fluid dynamics, plasma processing, aerosol science, and synthesizing advanced materials (carbon nanotubes).
-                        </p>
-                        <p>
-                            I believe that the future of scientific discovery lies in the synergy between domain expertise and computational tools. My goal is to continue building bridges between these two worlds, creating intuitive and powerful applications that empower researchers to ask bigger questions and get answers faster.
-                        </p>
-                        <p>
-                            My definition of fun includes dancing,reading fiction and hiking. Feel free to contact me at jui [dot] junnarkar [at] gmail with questions, suggestions or feedback.
-                        </p>
+                        <p>I am a Ph.D. Candidate in Chemical and Biomolecular Engineering at Rice University, driven by a deep interest in leveraging technology to solve real-world scientific problems. My background is in Chemical Engineering, and through my doctoral research, I have developed expertise in computational fluid dynamics, plasma processing, aerosol science, and the synthesis of advanced materials like carbon nanotubes.</p>
+                        <p>I believe the future of scientific discovery lies in the synergy between domain expertise and computational tools. My goal is to continue building bridges between these two worlds by creating intuitive and powerful applications that empower researchers to ask bigger questions and find answers faster.</p>
+                        <p>When I'm not in the lab, I enjoy dancing, reading fiction, and hiking. I welcome questions, suggestions, or feedback, so feel free to contact me at jui [dot] junnarkar [at] gmail.</p>
                     </div>
 
                     <div class="mt-12">
                         <h3 class="text-2xl font-bold mb-6 text-center">Technical Skills</h3>
                         <div class="space-y-6">
                             <div>
-                                <h4 class="font-semibold text-lg mb-3">Computational & Modeling</h4>
+                                <h4 class="font-semibold text-lg mb-3">Computational &amp; Modeling</h4>
                                 <div class="flex flex-wrap gap-3">
                                     <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">OpenFOAM</span>
                                     <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">COMSOL</span>
@@ -488,14 +445,14 @@
                                 </div>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-lg mb-3">Experimental & Characterization</h4>
+                                <h4 class="font-semibold text-lg mb-3">Experimental &amp; Characterization</h4>
                                 <div class="flex flex-wrap gap-3">
                                     <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">FCCVD Synthesis</span>
                                     <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">RF Plasma Operation</span>
                                     <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Raman Spectroscopy</span>
                                     <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">SEM</span>
                                     <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">TGA</span>
-                                    <span class="bg-pink-100 text-pink-800 text-sm font-medium px-3 py-1 rounded-full">DMA & CPC Particle Sizing</span>
+                                    <span class="bg-pink-100 text-pink-800 text-sm font-medium px-3 py-1 rounded-full">DMA &amp; CPC Particle Sizing</span>
                                     <span class="bg-pink-100 text-pink-800 text-sm font-medium px-3 py-1 rounded-full">Mass Spectrometry</span>
                                 </div>
                             </div>
@@ -512,14 +469,13 @@
         <div class="max-w-4xl mx-auto px-6 py-6 text-center text-gray-500">
             <div class="flex justify-center space-x-6 mb-4">
                 <!-- Google Scholar -->
-                <a href="https://scholar.google.com/citations?user=bBvbDvMAAAAJ&hl=en&authuser=4" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600">
+                <a href="https://scholar.google.com/citations?user=bBvbDvMAAAAJ&hl=en&authuser=4" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600" aria-label="Google Scholar">
                     <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5L12 0l12 9.5l-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5s-5.548 1.749-6.758 4.269zM12 10a7 7 0 1 0 0 14a7 7 0 0 0 0-14z"/></svg>
                 </a>
                 <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/jui-junnarkar-38845414a/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600">
+                <a href="https://www.linkedin.com/in/jui-junnarkar-38845414a/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600" aria-label="LinkedIn">
                     <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
                 </a>
-                
             </div>
             <p>&copy; 2024 Jui Junnarkar. All Rights Reserved.</p>
         </div>
@@ -532,56 +488,33 @@
         const postArticleContainer = document.getElementById('post-article-container');
         const fullPostArticles = document.querySelectorAll('.full-post');
 
-        // --- Intersection Observer for fade-in animations ---
+        // Intersection Observer for fade-in animations
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); } });
         }, { threshold: 0.1 });
 
-        // --- Navigation Logic ---
         function updateActiveLink(targetId) {
             navLinks.forEach(link => {
                 const linkTargetId = link.getAttribute('onclick').match(/'([^']+)'/)[1];
-                if (linkTargetId === targetId) {
-                    link.classList.add('nav-active');
-                } else {
-                    link.classList.remove('nav-active');
-                }
+                if (linkTargetId === targetId) link.classList.add('nav-active');
+                else link.classList.remove('nav-active');
             });
         }
 
         function showSection(id) {
             let found = false;
             sections.forEach(section => {
-                section.classList.remove('is-visible'); 
-                if (section.id === id) {
-                    section.style.display = 'block';
-                    found = true;
-                } else {
-                    section.style.display = 'none';
-                }
+                section.classList.remove('is-visible');
+                if (section.id === id) { section.style.display = 'block'; found = true; }
+                else { section.style.display = 'none'; }
             });
-            
             if (found) {
-                updateActiveLink(id);
-                window.scrollTo(0, 0);
-                setTimeout(() => {
-                    const activeSection = document.getElementById(id);
-                    if (activeSection) {
-                        activeSection.classList.add('is-visible');
-                    }
-                }, 10);
-                // If we're showing the posts section, ensure the list view is visible
-                if (id === 'posts') {
-                    viewPostList();
-                }
+                updateActiveLink(id); window.scrollTo(0, 0);
+                setTimeout(() => { const active = document.getElementById(id); if (active) active.classList.add('is-visible'); }, 10);
+                if (id === 'posts') { viewPostList(); }
             }
         }
 
-        // --- Post Viewing Logic ---
         function viewPostList() {
             postListContainer.style.display = 'block';
             postArticleContainer.style.display = 'none';
@@ -590,42 +523,28 @@
         function viewPost(articleId) {
             postListContainer.style.display = 'none';
             postArticleContainer.style.display = 'block';
-            
-            fullPostArticles.forEach(article => {
-                if (article.id === articleId) {
-                    article.style.display = 'block';
-                } else {
-                    article.style.display = 'none';
-                }
+            document.querySelectorAll('.full-post').forEach(article => {
+                article.style.display = (article.id === articleId) ? 'block' : 'none';
             });
             window.scrollTo(0, 0);
         }
 
-        // --- Function to show a specific post from another page (like Home) ---
         function showPost(articleId) {
             showSection('posts');
-            // We need a slight delay for the section to become visible before calling viewPost
-            setTimeout(() => {
-                viewPost(articleId);
-            }, 50);
+            setTimeout(() => { viewPost(articleId); }, 50);
         }
         
-        // --- Mobile Menu Logic ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        function toggleMenu() {
-            mobileMenu.classList.toggle('hidden');
-        }
+        function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
         mobileMenuButton.addEventListener('click', toggleMenu);
 
-        // --- Initial Load ---
         document.addEventListener('DOMContentLoaded', () => {
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+            sections.forEach(section => { observer.observe(section); });
             showSection('home');
         });
     </script>
 
 </body>
 </html>
+
