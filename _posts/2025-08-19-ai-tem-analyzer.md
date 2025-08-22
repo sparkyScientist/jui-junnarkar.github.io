@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "Automating Catalyst Characterization: An AI-Powered Tool for TEM Particle Size Analysis"
-image: /assets/img/analyzer-header.png
+date: 2025-08-19
+image: "https://i.postimg.cc/QCj7YkNc/Screenshot-2025-08-19-at-5-42-36-PM.png"
 image_alt: "AI Analyzer App"
 summary: "A walk-through from dataset annotation to a working desktop app for TEM particle measurements."
 ---
+
 
 
 
