@@ -1,22 +1,28 @@
 <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
   <div class="max-w-4xl mx-auto px-6">
     <div class="flex justify-between items-center py-4">
-      <a class="text-2xl font-bold text-gray-900" href="{{ '/' | relative_url }}">NanoSpark Dynamics</a>
-      <nav class="hidden md:flex space-x-8 text-lg">
-        {% for item in site.nav %}
-          {% assign active = page.url == item.url %}
-          <a href="{{ item.url | relative_url }}" class="nav-link text-gray-600 hover:text-blue-600 transition-colors {% if active %}nav-active{% endif %}">{{ item.text }}</a>
-        {% endfor %}
+      <div class="text-2xl font-bold text-gray-900">
+        <a href="{{ '/' | relative_url }}">NanoSpark Dynamics</a>
+      </div>
+      <nav id="desktop-nav" class="hidden md:flex space-x-8 text-lg">
+        <a href="{{ '/' | relative_url }}" class="nav-link text-gray-600 hover:text-blue-600 transition-colors {% if page.url == '/' %}nav-active{% endif %}">Home</a>
+        <a href="{{ '/research/' | relative_url }}" class="nav-link text-gray-600 hover:text-blue-600 transition-colors {% if page.url == '/research/' %}nav-active{% endif %}">Research</a>
+        <a href="{{ '/posts/' | relative_url }}" class="nav-link text-gray-600 hover:text-blue-600 transition-colors {% if page.url == '/posts/' %}nav-active{% endif %}">Posts</a>
+        <a href="{{ '/about/' | relative_url }}" class="nav-link text-gray-600 hover:text-blue-600 transition-colors {% if page.url == '/about/' %}nav-active{% endif %}">About</a>
       </nav>
-      <button id="mobile-menu-button" class="md:hidden text-gray-800" aria-label="Open menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
-      </button>
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-800 focus:outline-none" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
     </div>
   </div>
+  <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-    {% for item in site.nav %}
-    <a href="{{ item.url | relative_url }}" class="block py-2 text-gray-600 hover:text-blue-600">{{ item.text }}</a>
-    {% endfor %}
+    <a href="{{ '/' | relative_url }}" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+    <a href="{{ '/research/' | relative_url }}" class="block py-2 text-gray-600 hover:text-blue-600">Research</a>
+    <a href="{{ '/posts/' | relative_url }}" class="block py-2 text-gray-600 hover:text-blue-600">Posts</a>
+    <a href="{{ '/about/' | relative_url }}" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
   </div>
 </header>
-
