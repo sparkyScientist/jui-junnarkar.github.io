@@ -1,1 +1,27 @@
+title: "NanoSpark Dynamics"
+tagline: "Synthesizing Advanced Nanomaterials with Plasma and CFD"
+url: "https://juijunnarkar.com"
+baseurl: ""
+author: "Jui Junnarkar"
+email: "jui.junnarkar@gmail.com"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+permalink: /:categories/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+nav:
+  - text: Home
+    url: /
+  - text: Research
+    url: /research/
+  - text: Posts
+    url: /posts/
+  - text: About
+    url: /about/
 
