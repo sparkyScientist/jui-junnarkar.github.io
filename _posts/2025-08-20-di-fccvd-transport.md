@@ -47,13 +47,15 @@ If we control that interface, we control productivity.
 We quantified transport using two key dimensionless numbers:
 
 - **Reynolds number (Re):**
-\( Re = \frac{\rho U D}{\mu} \)
+$$
+Re = \frac{\rho U D}{\mu}
+$$
 measures jet momentum vs viscous dissipation.
 
 - **Rayleigh number (Ra):**  
-\(
+$$
 Ra=\frac{g\,\beta\,\Delta T\,L^3}{\nu\,\alpha}
-\)
+$$
 captures buoyancy driven convection relative to diffusion.
 
 ![Re_Ra]({{'assets/Re_Ra_trends.png'| relative_url }})  
@@ -77,9 +79,9 @@ Helium’s low density and high diffusivity shorten the jet.
 As He concentration increases, the Reynolds number falls.  
 At a threshold of **Re ≈ 260**, methane conversion drops sharply:
 
-\(
+$$
 X_{CH_4} = \frac{F_{CH_4,in} - F_{CH_4,out}}{F_{CH_4,in}}
-\)
+$$
 
 💡 Below critical \(Re\), the jet cannot sustain overlap with hot recirculation : CNT growth collapses.
 
@@ -101,13 +103,13 @@ At the **sweet spot** (Ar/N₂, proper Re, tuned chemistry), DI-FCCVD achieved:
 - **CNT selectivity:** >90%  
 - **Productivity:** ~430 mg/h  
 
-\[
+$$
 P = \frac{m_{CNT}}{t}
-\]
+$$
 The selectivity was defined formally as:  
-\[
+$$
 S_{CNT} = \frac{m_{CNT}}{m_{CNT} + m_{other \, carbon}}
-\]
+$$
 
 These numbers are among the **highest reported FCCVD yields**.
 
