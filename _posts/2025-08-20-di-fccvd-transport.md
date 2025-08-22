@@ -47,15 +47,19 @@ If we control that interface, we control productivity.
 We quantified transport using two key dimensionless numbers:
 
 - **Reynolds number (Re):**
+  
 $$
 Re = \frac{\rho U D}{\mu}
 $$
+
 measures jet momentum vs viscous dissipation.
 
-- **Rayleigh number (Ra):**  
+- **Rayleigh number (Ra):**
+  
 $$
 Ra=\frac{g\,\beta\,\Delta T\,L^3}{\nu\,\alpha}
 $$
+
 captures buoyancy driven convection relative to diffusion.
 
 ![Re_Ra]({{'assets/Re_Ra_trends.png'| relative_url }})  
