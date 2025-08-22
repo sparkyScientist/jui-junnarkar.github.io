@@ -1,13 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>{% include head.html %}</head>
 <body class="bg-gray-50 text-gray-800">
   {% include header.html %}
-  <main class="min-h-screen">
+  <main>
     {{ content }}
   </main>
   {% include footer.html %}
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
-
