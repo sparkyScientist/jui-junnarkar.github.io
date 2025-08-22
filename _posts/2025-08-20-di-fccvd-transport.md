@@ -37,7 +37,7 @@ This sets up a very different flow structure:
 💡 Growth happens at the *interface* of cold jet + hot recirculation.  
 If we control that interface, we control productivity.
 
-![DI schematic](assets/DIFCCVD_reactor schematic.png)  
+![DI schematic]({{'assets/DIFCCVD_reactor schematic.png'| relative_url }})  
 *Figure 1. Deep Injection reactor. The gases and precursors are injected directly in the hot zone.*
 
 ---
@@ -58,7 +58,7 @@ Ra = \frac{g \, \beta \, \Delta T \, L^3}{\nu \, \alpha}
 \]  
 captures buoyancy driven convection relative to diffusion.
 
-![Re_Ra](assets/Re_Ra_trends.png)  
+![Re_Ra]({{'assets/Re_Ra_trends.png'| relative_url }})  
 *Figure 1. Re and Ra as a function of substituting process gas concentration. Lighter gases systematically reduce both.*
 
 As lighter gases (He, H₂) replaced Ar, both **Re** and **Ra** decreased.  
@@ -90,7 +90,7 @@ Hydrogen behaves like helium in transport, but chemically it quenches the carbon
 At low levels, it improves selectivity.  
 At full substitution, **methane conversion dropped from ~13% to 0.17% (80× decrease).**
 
-![Gas productivity](assets/Conv_change_with_gas.png)  
+![Gas productivity]({{'assets/Conv_change_with_gas.png'| relative_url }})  
 *Figure 2. CNT conversion vs carrier gas composition.*
 
 ---
@@ -123,14 +123,14 @@ CFD simulations (OpenFOAM) revealed how gas properties reshape jet–recirculati
 - With Ar: jet extends ~0.5 m, overlapping strongly with recirculation.  
 - With He/H₂: jet collapses early, recirculation shrinks, growth zone disappears.
 
-![CFD jet map](assets/Explaining CFD.png)  
+![CFD jet map]({{'assets/Explaining CFD.png'| relative_url }})  
 *Figure 3. CFD shows cold jet (blue) and hot recirculation (red). CNT growth occurs at the shear interface.*
 
 Velocity and temperature fields from the SI confirm: **CNT growth aligns with transport defined zones, not uniform chemistry.**
 
 To illustrate the coupling between transport and conversion more clearly, we also compared methane conversion against Reynolds number across conditions:
 
-![Re vs Conversion](assets/Re_vs_gas_comp.png)  
+![Re vs Conversion]({{'assets/Re_vs_gas_comp.png'| relative_url }})  
 *Figure 4. Experimental methane conversion collapses once Re falls below ~260, consistent with CFD predictions of jet shortening.*
 
 ---
@@ -143,7 +143,7 @@ This work shows:
 2. **Chemistry and transport must align** — controlling one without the other fails.  
 3. **CFD + experiments give a predictive framework** for reactor design.  
 
-![Suggested mechanism](assets/Schematic_showing_DIFCCVD.png)  
+![Suggested mechanism]({{'assets/Schematic_showing_DIFCCVD.png'| relative_url }})  
 *Figure 4. Scheme of suggested mechanism of DI FCCVD reactor.*
 
 
