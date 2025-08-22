@@ -6,7 +6,8 @@ permalink: /research/
 
 <section class="section">
   <div class="card p-8">
-    <h2 class="text-2xl font-bold mb-3"><strong>Research Interests<strong>
+    <h2 class="text-2xl font-bold mb-3"><strong>Research Interests</strong></h2>
+
     <p class="text-lg text-gray-700 leading-relaxed">
       My research is focused on decoupling complex synthesis processes by integrating plasma-based nanoparticle generation with advanced reactor design. I'm interested in leveraging computational fluid dynamics (CFD) and in-situ diagnostics to control aerosol dynamics, catalyst evolution, and the synthesis of high-performance nanomaterials.
     </p>
