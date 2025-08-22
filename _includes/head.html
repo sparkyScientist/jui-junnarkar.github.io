@@ -20,38 +20,46 @@
   gtag('config', 'G-62C8SV662X');
 </script>
 
-<!-- Tailwind + font -->
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- Tailwind + Typography plugin -->
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true
-    },
-    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
-  };
+
+<!-- MathJax (for LaTeX in posts) -->
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 <style>
   body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-  /* Simple animation for page sections */
-  .page-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; display: none; }
+
+  /* Section fade-in (used on SPA parts and feels like your original) */
+  .page-section { opacity: 0; transform: translateY(20px);
+    transition: opacity .6s ease-out, transform .6s ease-out; display: none; }
   .page-section.is-visible { opacity: 1; transform: translateY(0); display: block; }
+
+  /* Global page fade on full navigations */
+  html.is-loading body { opacity: 0; transform: translateY(10px); }
+  html.is-ready body { opacity: 1; transform: translateY(0);
+    transition: opacity .45s ease, transform .45s ease; }
+
+  /* Backgrounds (unchanged URLs) */
   .hero-bg { background-image: url('https://i.postimg.cc/Twk8Mz4Y/IMG-6438.avif'); background-size: cover; background-position: center; }
   .about-hero-bg { background-image: url('https://i.postimg.cc/nLYTNqPH/IMG-4419.avif'); background-size: cover; background-position: center 45%; }
-  /* Active nav */
+
+  /* Active nav and helpers */
   .nav-active { color: #2563EB; font-weight: 500; }
-  /* Blog helpers */
-  .tag { display: inline-block; background-color: #e0e7ff; color: #3730a3; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; margin-right: 0.5rem; margin-bottom: 0.5rem; }
-  .metric-card { background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; text-align: center; transition-transform: transform 0.2s; }
+  .tag { display:inline-block; background:#e0e7ff; color:#3730a3; padding:.25rem .75rem; border-radius:9999px; font-size:.875rem; font-weight:500; margin:.25rem .5rem .5rem 0; }
+  .metric-card { background:#f9fafb; border:1px solid #e5e7eb; border-radius:.75rem; padding:1.5rem; text-align:center; transition:transform .2s; }
   .metric-card:hover { transform: scale(1.05); }
-  .image-caption { text-align: center; font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem; }
-  .insight-quote { border-left: 4px solid #4f46e5; padding-left: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; font-style: italic; color: #374151; }
-   /* page fade-in for multi-page Jekyll */
-  html.is-loading body { opacity: 0; transform: translateY(10px); }
-  html.is-ready body { opacity: 1; transform: translateY(0); transition: opacity .45s ease, transform .45s ease; }
+  .image-caption { text-align:center; font-size:.875rem; color:#6b7280; margin-top:.5rem; }
+  .insight-quote { border-left:4px solid #4f46e5; padding-left:1rem; margin:1.5rem 0; font-style:italic; color:#374151; }
 </style>
 
+<script>
+  // Global fade-in on each page load
+  document.documentElement.classList.add('is-loading');
+  window.addEventListener('load', () => {
+    document.documentElement.classList.remove('is-loading');
+    document.documentElement.classList.add('is-ready');
+  });
+</script>
