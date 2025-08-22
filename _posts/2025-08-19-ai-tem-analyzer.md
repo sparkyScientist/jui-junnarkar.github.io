@@ -44,7 +44,14 @@ A model file on its own isn’t very practical for day-to-day lab work. The fina
 
 In practice, the workflow is straightforward: select a folder of images, set the scale with two clicks, and press “Analyze.” Within seconds, the app generates side-by-side images for review, real-time stats like mean and standard deviation, and a particle size distribution histogram. If the AI mislabels something, it can be corrected with a click, and all results update instantly. Exporting the data is just as quick.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CMIcvvrr1Os?si=Hh0Pfk-wD5tQF4oS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/CMIcvvrr1Os?si=Hh0Pfk-wD5tQF4oS"
+  title="YouTube video player"
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" 
+  allowfullscreen>
+</iframe>
 
 ## Challenges & Solutions
 
