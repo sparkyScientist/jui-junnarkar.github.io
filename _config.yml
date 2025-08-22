@@ -14,6 +14,8 @@ permalink: /:categories/:year/:month/:day/:title/
 markdown: kramdown
 kramdown:
   input: GFM
+  math_engine: mathjax
+
 
 nav:
   - text: Home
@@ -24,4 +26,5 @@ nav:
     url: /posts/
   - text: About
     url: /about/
+
 
