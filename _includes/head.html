@@ -40,3 +40,6 @@
   .image-caption { text-align: center; font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem; }
   .insight-quote { border-left: 4px solid #4f46e5; padding-left: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; font-style: italic; color: #374151; }
 </style>
+/!-- page fade-in --!/
+html.is-loading body { opacity: 0; transform: translateY(10px); }
+html.is-ready body { opacity: 1; transform: translateY(0); transition: opacity .45s ease, transform .45s ease; }
