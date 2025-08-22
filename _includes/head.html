@@ -20,50 +20,67 @@
   gtag('config', 'G-62C8SV662X');
 </script>
 
-<!-- Tailwind + Typography plugin -->
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<!-- Tailwind + Font -->
+<script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
-<!-- MathJax (for LaTeX in posts) -->
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
+<!-- Typography tune + hero backgrounds + card helpers + page fade -->
 <style>
+  :root{
+    --content-max: 64rem; /* ~1024px, same feel as before */
+  }
   body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+  /* Per-page fade-in */
+  html.is-loading body{opacity:0;transform:translateY(8px)}
+  html.is-ready body{opacity:1;transform:translateY(0);transition:opacity .45s ease, transform .45s ease}
 
-  /* Section fade-in (used on SPA parts and feels like your original) */
-  .page-section { opacity: 0; transform: translateY(20px);
-    transition: opacity .6s ease-out, transform .6s ease-out; display: none; }
-  .page-section.is-visible { opacity: 1; transform: translateY(0); display: block; }
+  /* Section spacing rhythm (more air = less crowded) */
+  .section { max-width: var(--content-max); margin-left:auto; margin-right:auto; padding: 3rem 1.5rem; }
+  @media (min-width: 768px){ .section{ padding: 4rem 1.5rem } }
 
-  /* Global page fade on full navigations */
-  html.is-loading body { opacity: 0; transform: translateY(10px); }
-  html.is-ready body { opacity: 1; transform: translateY(0);
-    transition: opacity .45s ease, transform .45s ease; }
-
-  /* Backgrounds (unchanged URLs) */
+  /* Hero backgrounds */
   .hero-bg { background-image: url('https://i.postimg.cc/Twk8Mz4Y/IMG-6438.avif'); background-size: cover; background-position: center; }
   .about-hero-bg { background-image: url('https://i.postimg.cc/nLYTNqPH/IMG-4419.avif'); background-size: cover; background-position: center 45%; }
 
-  /* Active nav and helpers */
+  /* Nav active */
   .nav-active { color: #2563EB; font-weight: 500; }
-  .tag { display:inline-block; background:#e0e7ff; color:#3730a3; padding:.25rem .75rem; border-radius:9999px; font-size:.875rem; font-weight:500; margin:.25rem .5rem .5rem 0; }
-  .metric-card { background:#f9fafb; border:1px solid #e5e7eb; border-radius:.75rem; padding:1.5rem; text-align:center; transition:transform .2s; }
-  .metric-card:hover { transform: scale(1.05); }
-  .image-caption { text-align:center; font-size:.875rem; color:#6b7280; margin-top:.5rem; }
-  .insight-quote { border-left:4px solid #4f46e5; padding-left:1rem; margin:1.5rem 0; font-style:italic; color:#374151; }
 
-  .prose :where(p, li){ line-height: 1.9; }
-.prose { max-width: 70ch; }  /* keeps lines a comfortable length */
+  /* Blog helpers */
+  .tag { display:inline-block; background-color:#e0e7ff; color:#3730a3; padding:.25rem .75rem; border-radius:9999px; font-size:.875rem; font-weight:500; margin:.25rem .5rem .5rem 0; }
+  .metric-card { background:#f9fafb; border:1px solid #e5e7eb; border-radius:.75rem; padding:1.5rem; text-align:center; transition:transform .2s }
+  .metric-card:hover{ transform:scale(1.05) }
+  .image-caption{ text-align:center; font-size:.875rem; color:#6b7280; margin-top:.5rem }
 
+  /* Post typography (bigger body + larger headings + generous spacing) */
+  .post-typography p{ font-size:1.1rem; line-height:1.85; margin:1rem 0 }
+  .post-typography ul, .post-typography ol{ margin:1rem 0 1.25rem 1.25rem }
+  .post-typography li{ margin:.4rem 0 }
+  .post-typography h2{ font-size:1.875rem; font-weight:800; margin:2.25rem 0 1rem }
+  .post-typography h3{ font-size:1.375rem; font-weight:700; margin:1.75rem 0 .75rem }
+  .post-typography img{ margin:1.25rem auto; }
+
+  /* Card list spacing like your original */
+  .card-grid{ display:grid; gap:3rem }
+  @media (min-width:768px){ .card-grid{ grid-template-columns:repeat(2, minmax(0,1fr)) } }
+  .card{ background:#fff; border:1px solid #e5e7eb; border-radius:1rem; overflow:hidden; box-shadow:0 10px 20px -10px rgba(0,0,0,.15) }
+  .card .thumb{ width:100%; height:12rem; object-fit:cover; }
+  .card .thumb.contain{ object-fit:contain; background:#f8fafc }
+  .card .body{ padding:1.25rem 1.5rem }
+  .card h3{ font-size:1.5rem; font-weight:800; margin-bottom:.5rem }
 </style>
 
+<!-- MathJax v3 (equations render in posts and pages) -->
 <script>
-  // Global fade-in on each page load
-  document.documentElement.classList.add('is-loading');
-  window.addEventListener('load', () => {
-    document.documentElement.classList.remove('is-loading');
-    document.documentElement.classList.add('is-ready');
-  });
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(','\\)'], ['$', '$']],
+      displayMath: [['\\[','\\]'], ['$$','$$']],
+      processEscapes: true
+    },
+    options:{ skipHtmlTags: ['script','noscript','style','textarea'] }
+  };
 </script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<!-- mark page ready -->
+<script>document.documentElement.classList.add('is-loading'); window.addEventListener('load', ()=>document.documentElement.classList.replace('is-loading','is-ready'));</script>
