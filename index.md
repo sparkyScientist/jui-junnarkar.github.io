@@ -6,7 +6,7 @@ description: The personal research portfolio of Jui Junnarkar.
 
 <div class="hero-bg text-white">
   <div class="bg-black bg-opacity-50">
-    <div class="max-w-4xl mx-auto px-6 py-24 text-center">
+    <div class="max-w-4xl mx-auto px-6 py-32 text-center">
       <h1 class="text-6xl font-bold">NanoSpark Dynamics</h1>
       <p class="text-xl mt-4">Synthesizing Advanced Nanomaterials with Plasma and CFD</p>
     </div>
