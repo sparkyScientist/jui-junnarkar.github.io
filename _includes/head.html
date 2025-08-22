@@ -30,9 +30,10 @@
     --content-max: 64rem; /* ~1024px, same feel as before */
   }
   body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-  /* Per-page fade-in */
-  html.is-loading body{opacity:0;transform:translateY(8px)}
-  html.is-ready body{opacity:1;transform:translateY(0);transition:opacity .45s ease, transform .45s ease}
+ /* Page fade-in on load (works on all pages) */
+html.is-loading body { opacity: 0; transform: translateY(10px); }
+html.is-ready body { opacity: 1; transform: translateY(0); transition: opacity .45s ease, transform .45s ease; }
+
 
   /* Section spacing rhythm (more air = less crowded) */
   .section { max-width: var(--content-max); margin-left:auto; margin-right:auto; padding: 3rem 1.5rem; }
