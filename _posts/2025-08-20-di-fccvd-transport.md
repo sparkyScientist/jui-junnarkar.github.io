@@ -46,8 +46,10 @@ If we control that interface, we control productivity.
 
 We quantified transport using two key dimensionless numbers:
 
-- **Reynolds number (Re):**  
-$Re=\frac{\rho U D}{\mu}$  
+- **Reynolds number (Re):**
+$$
+Re=\frac{\rho U D}{\mu}
+$$
 measures jet momentum vs viscous dissipation.
 
 - **Rayleigh number (Ra):**  
