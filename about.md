@@ -22,10 +22,37 @@ permalink: /about/
                     </div>
 
 
-    <div class="mt-12">
-      <h3 class="text-2xl font-bold mb-6 text-center">Technical Skills</h3>
-      <!-- keep the exact badges from your current HTML if you want the identical look -->
-    </div>
+  
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Technical Skills</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-semibold text-lg mb-3">Computational &amp; Modeling</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">OpenFOAM</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">COMSOL</span>
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Python (NumPy, SciPy, Pandas)</span>
+                                    <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">MATLAB</span>
+                                    <span class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">Bash</span>
+                                    <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">CHEMKIN</span>
+                                    <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">Cantera</span>
+                                    <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Aerosol Dynamics</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-3">Experimental &amp; Characterization</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">FCCVD Synthesis</span>
+                                    <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">RF Plasma Operation</span>
+                                    <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Raman Spectroscopy</span>
+                                    <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">SEM</span>
+                                    <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">TGA</span>
+                                    <span class="bg-pink-100 text-pink-800 text-sm font-medium px-3 py-1 rounded-full">DMA &amp; CPC Particle Sizing</span>
+                                    <span class="bg-pink-100 text-pink-800 text-sm font-medium px-3 py-1 rounded-full">Mass Spectrometry</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
   </div>
 </section>
 
