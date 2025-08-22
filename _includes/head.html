@@ -1,36 +1,42 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Keep your SEO metas -->
-<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | {{ site.tagline }}{% endif %}</title>
-<meta name="description" content="{{ page.description | default: site.tagline }}">
-<meta name="keywords" content="Jui Junnarkar, Chemical Engineering, Nanoparticles, Plasma, CFD, COMSOL, OpenFOAM, Carbon Nanotubes, Rice University, Researcher">
-<meta name="author" content="{{ site.author }}">
 <meta name="google-site-verification" content="z0gZgK6gD_wUvvZUFoGcktQD--FbncpqdXgJ8-4RdII" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- SEO Meta Tags -->
+<title>{% if page.title %}{{ page.title }} | NanoSpark Dynamics{% else %}NanoSpark Dynamics | Jui Junnarkar{% endif %}</title>
+<meta name="description" content="The personal research portfolio of Jui Junnarkar, a Ph.D. Candidate at Rice University, showcasing work in nanomaterials, plasma synthesis, and computational fluid dynamics (CFD).">
+<meta name="keywords" content="Jui Junnarkar, Chemical Engineering, Nanoparticles, Plasma, CFD, COMSOL, OpenFOAM, Carbon Nanotubes, Rice University, Researcher">
+<meta name="author" content="Jui Junnarkar">
+
+<!-- Favicon -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-<!-- Tailwind + font (same as current) -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62C8SV662X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62C8SV662X');
+</script>
+
+<!-- Tailwind + font -->
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
   body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-  .nav-active { color:#2563EB; font-weight:500; }
-  .tag { display:inline-block; background-color:#e0e7ff; color:#3730a3; padding:.25rem .75rem; border-radius:9999px; font-size:.875rem; font-weight:500; margin-right:.5rem; margin-bottom:.5rem; }
-  .metric-card { background:#f9fafb; border:1px solid #e5e7eb; border-radius:.75rem; padding:1.5rem; text-align:center; transition:transform .2s; }
-  .metric-card:hover { transform:scale(1.05); }
-  .image-caption { text-align:center; font-size:.875rem; color:#6b7280; margin-top:.5rem; }
-  .insight-quote { border-left:4px solid #4f46e5; padding-left:1rem; margin:1.5rem 0; font-style:italic; color:#374151; }
-  .hero-bg { background-image:url('https://i.postimg.cc/Twk8Mz4Y/IMG-6438.avif'); background-size:cover; background-position:center; }
-  .about-hero-bg { background-image:url('https://i.postimg.cc/nLYTNqPH/IMG-4419.avif'); background-size:cover; background-position:center 45%; }
+  /* Simple animation for page sections */
+  .page-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; display: none; }
+  .page-section.is-visible { opacity: 1; transform: translateY(0); display: block; }
+  .hero-bg { background-image: url('https://i.postimg.cc/Twk8Mz4Y/IMG-6438.avif'); background-size: cover; background-position: center; }
+  .about-hero-bg { background-image: url('https://i.postimg.cc/nLYTNqPH/IMG-4419.avif'); background-size: cover; background-position: center 45%; }
+  /* Active nav */
+  .nav-active { color: #2563EB; font-weight: 500; }
+  /* Blog helpers */
+  .tag { display: inline-block; background-color: #e0e7ff; color: #3730a3; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+  .metric-card { background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1.5rem; text-align: center; transition-transform: transform 0.2s; }
+  .metric-card:hover { transform: scale(1.05); }
+  .image-caption { text-align: center; font-size: 0.875rem; color: #6b7280; margin-top: 0.5rem; }
+  .insight-quote { border-left: 4px solid #4f46e5; padding-left: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem; font-style: italic; color: #374151; }
 </style>
-
-<!-- Google Analytics (your ID) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-62C8SV662X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date()); gtag('config', 'G-62C8SV662X');
-</script>
-
