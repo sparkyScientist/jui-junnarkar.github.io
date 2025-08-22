@@ -73,14 +73,14 @@
 <script>
   window.MathJax = {
     tex: {
-      inlineMath: [['\\(','\\)'], ['$', '$']],
-      displayMath: [['\\[','\\]'], ['$$','$$']],
-      processEscapes: true
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']]
     },
-    options:{ skipHtmlTags: ['script','noscript','style','textarea'] }
+    svg: { fontCache: 'global' }
   };
 </script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
 
 <!-- mark page ready -->
 <script>document.documentElement.classList.add('is-loading'); window.addEventListener('load', ()=>document.documentElement.classList.replace('is-loading','is-ready'));</script>
