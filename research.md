@@ -5,7 +5,7 @@ permalink: /research/
 ---
 
 ### Research Interests
-My research is focused on decoupling complex synthesis processes by integrating plasma-based nanoparticle generation with advanced reactor design…
+My research is focused on decoupling complex synthesis processes by integrating plasma-based nanoparticle generation with advanced reactor design. I'm interested in leveraging computational fluid dynamics (CFD) and in-situ diagnostics to control aerosol dynamics, catalyst evolution, and the synthesis of high-performance nanomaterials.
 
 <div class="text-center mb-10">
   <a href="https://scholar.google.com/citations?user=bBvbDvMAAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" class="inline-block bg-blue-600 text-white font-bold text-lg px-8 py-3 rounded-lg hover:bg-blue-700">
