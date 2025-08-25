@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cracking the Code of CNT Growth: How Transport Phenomena Shape Deep-Injection Reactors"
-date: 2025-08-20
+date: 2025-08-25
 image: "assets/Schematic_showing_DIFCCVD.png"
 image_alt: "Conventional FCCVD vs deep injection schematic"
 summary: "Transport, not just chemistry: the jet–recirculation story behind CNT yield in DI-FCCVD."
