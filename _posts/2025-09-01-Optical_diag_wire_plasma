@@ -26,10 +26,10 @@ To study this, we built a **miniature inductively coupled plasma (ICP)** system:
 - A **gas mix of argon with trace nitrogen**.  
 - Diagnostics combining **optical emission spectroscopy (OES)** and **aerosol analyzers (DMA + CPC)**.
 
-![ICP schematic]({{'assets/ICP_schematic.png' | relative_url }})  
+![ICP schematic]({{'assets/Optical_diag/OES schematic.png' | relative_url }})  
 *Figure 1. Schematic of the ICP nanoparticle formation setup.*
 
-This compact design let us measure plasma conditions (via light) and Fe nanoparticle size distributions (via mobility) simultaneously.
+This compact design let us measure plasma conditions (via light) and Fe nanoparticle size distributions (via CPC) simultaneously.
 
 ---
 
