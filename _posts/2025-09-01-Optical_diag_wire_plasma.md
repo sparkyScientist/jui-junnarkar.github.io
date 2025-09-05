@@ -2,7 +2,7 @@
 layout: post
 title: "Optical Diagnostics of Iron Nanoparticle Formation in ICP Plasmas"
 date: 2025-09-01
-image: "assets/ICP_schematic.png"
+image: "assets/Optical_diag/IMG_4866.WEBP"
 image_alt: "Miniature ICP reactor schematic"
 summary: "Using light as a probe: how plasma diagnostics reveal gas temperatures and nanoparticle formation."
 ---
