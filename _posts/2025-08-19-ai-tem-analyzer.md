@@ -10,7 +10,7 @@ summary: "A walk-through from dataset annotation to a working desktop app for TE
 
 
 
-A walk through how I built a custom computer vision tool, starting with painstaking data annotation and ending with a working desktop app that makes TEM particle measurements fast and reliable.
+A walk through how I built a custom computer vision tool, starting with manual data annotation and ending with a working desktop app that makes TEM particle measurements fast and reliable.
 
 ## The High Cost of a Simple Question
 
