@@ -158,5 +158,5 @@ That’s the step CNTs need to move from lab to large scale technology.
 ---
 
 📖 **Full paper:**  
-[Junnarkar et al., *Carbon* (2025) 238:120259](https://doi.org/10.1016/j.carbon.2025.120259)
+[Li,Junnarkar,Sloan et al., *Carbon* (2025) 238:120259](https://doi.org/10.1016/j.carbon.2025.120259)
 
