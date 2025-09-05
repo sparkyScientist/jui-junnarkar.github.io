@@ -8,23 +8,23 @@ summary: "Using light as a probe: how plasma diagnostics reveal gas temperatures
 ---
 
 When it comes to carbon nanotube (CNT) synthesis, we often talk about hydrocarbons and catalysts.  
-But before CNTs ever start to grow, **catalyst nanoparticles (NPs)** must first form, and their size distribution sets the stage for yield and quality.  
+But before CNTs ever start to grow, catalyst nanoparticles (NPs) must first form, and their size distribution sets the stage for yield and quality.  
 
 Most studies rely on electron microscopy and Raman spectroscopy after synthesis.  
 The problem: these only tell us what came out, not what happened *inside the plasma*.  
 
-✅ The missing piece: a way to directly measure **gas temperatures and nanoparticle formation in situ**.
+✅ The missing piece: a way to directly measure gas temperatures and nanoparticle formation in situ.
 
 ---
 
 ## The ICP Platform
 
-To study this, we built a **miniature inductively coupled plasma (ICP)** system:
+To study this, we built a miniature inductively coupled plasma (ICP) system:
 
 - A **1 mm iron wire** fed into a quartz tube.  
 - A **9-turn copper RF coil (27.12 MHz)** sustaining the plasma.  
 - A **gas mix of argon with trace nitrogen**.  
-- Diagnostics combining **optical emission spectroscopy (OES)** and **aerosol analyzers (DMA + CPC)**.
+- Diagnostics combining optical emission spectroscopy (OES) and aerosol analyzers (DMA + CPC).
 
 ![ICP schematic]({{'assets/Optical_diag/OES schematic.png' | relative_url }})  
 *Figure 1. Schematic of the ICP nanoparticle formation setup.*
@@ -91,7 +91,7 @@ In other words: ICP plasmas are a **controlled environment** to study nanopartic
 
 ## Looking Ahead
 
-The next step is to combine this ICP platform with hydrocarbon feedstocks — to directly observe the transition from **Fe NP → CNT nucleation**.  
+The next step is to combine this ICP platform with hydrocarbon feedstocks — to directly observe the transition from Fe NP → CNT nucleation.  
 By pairing plasma diagnostics with nanoparticle analysis, we can finally start controlling CNT synthesis from the ground up.
 
 ---
