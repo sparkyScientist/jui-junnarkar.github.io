@@ -91,7 +91,7 @@ In other words: ICP plasmas are a controlled environment to study nanoparticle f
 
 ## Looking Ahead
 
-The next step is to combine this ICP platform with hydrocarbon feedstocks — to directly observe the transition from Fe NP → CNT nucleation.  
+The next step is to combine this ICP platform with hydrocarbon feedstocks, to directly observe the transition from Fe NP → CNT nucleation.  
 By pairing plasma diagnostics with nanoparticle analysis, we can finally start controlling CNT synthesis from the ground up.
 
 ---
