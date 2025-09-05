@@ -21,9 +21,9 @@ The problem: these only tell us what came out, not what happened *inside the pla
 
 To study this, we built a miniature inductively coupled plasma (ICP) system:
 
-- A **1 mm iron wire** fed into a quartz tube.  
-- A **9-turn copper RF coil (27.12 MHz)** sustaining the plasma.  
-- A **gas mix of argon with trace nitrogen**.  
+- A 1 mm iron wire fed into a quartz tube.  
+- A 9-turn copper RF coil (27.12 MHz) sustaining the plasma.  
+- A gas mix of argon with trace nitrogen.  
 - Diagnostics combining optical emission spectroscopy (OES) and aerosol analyzers (DMA + CPC).
 
 ![ICP schematic]({{'assets/Optical_diag/OES schematic.png' | relative_url }})  
@@ -35,7 +35,7 @@ This compact design let us measure plasma conditions (via light) and Fe nanopart
 
 ## Plasma Light as a Thermometer
 
-OES provided gas temperatures by fitting rotational spectra of **N₂ and OH**.  
+OES provided gas temperatures by fitting rotational spectra of N₂ and OH.  
 Key findings:
 
 - **Gas temperature rises with RF power**: N₂ rotational spectra reached ~1200 K at 110 W and low flow.  
@@ -85,7 +85,7 @@ This study shows that:
 2. **Fe nanoparticles form with the right sizes (3–7 nm) for CNT growth.**  
 3. **Concentrations remain low**, making ICP a diagnostic tool, not a production reactor.  
 
-In other words: ICP plasmas are a **controlled environment** to study nanoparticle formation, before scaling insights into FCCVD reactors.
+In other words: ICP plasmas are a controlled environment to study nanoparticle formation, before scaling insights into FCCVD reactors.
 
 ---
 
