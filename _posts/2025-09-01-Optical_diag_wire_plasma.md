@@ -13,7 +13,7 @@ But before CNTs ever start to grow, catalyst nanoparticles (NPs) must first form
 Most studies rely on electron microscopy and Raman spectroscopy after synthesis.  
 The problem: these only tell us what came out, not what happened *inside the plasma*.  
 
-✅ The missing piece: a way to directly measure gas temperatures and nanoparticle formation in situ.
+The missing piece: a way to directly measure gas temperatures and nanoparticle formation in situ.
 
 ---
 
@@ -55,7 +55,8 @@ Broadband emission spectra revealed the active species inside:
 - **Fe I / Fe II lines** from evaporated and ionized iron.  
 - **OH radical** from trace water impurities.  
 - **Ar carrier gas lines**.  
-- **N₂ bands** spanning 280–500 nm.  
+- **N₂ bands** spanning 280–500 nm.
+Together, these spectral features map the chemistry of this specific RF plasma.
 
 ![Spectrum]({{'assets/Optical_diag/Full spectrum.png' | relative_url }})  
 *Figure 3. Broadband emission spectrum (190–900 nm). Iron, argon, OH, and N₂ features are clearly identified.*
@@ -68,7 +69,7 @@ These fingerprints confirm the plasma actively vaporizes Fe and sustains a react
 
 Fe nanoparticles exiting the plasma were sized in real time:
 
-- **Stable size range:** 3–7 nm across conditions.  
+- **Stable size range:** Most conditions produced 3–7 nm particles, though a few runs showed slightly broader tails.  
 - **Monodisperse distributions:** log-normal PSDs at low power (80 W).  
 - **Concentration trend:** NP counts dropped from ~\(10^8\) cm⁻³ at 1.5 lpm to ~\(10^7\) cm⁻³ at 2.0 lpm, due to shorter residence time.
 
@@ -92,7 +93,7 @@ In other words: ICP plasmas are a controlled environment to study nanoparticle f
 ## Looking Ahead
 
 The next step is to combine this ICP platform with hydrocarbon feedstocks, to directly observe the transition from Fe NP → CNT nucleation.  
-By pairing plasma diagnostics with nanoparticle analysis, we can finally start controlling CNT synthesis from the ground up.
+By pairing plasma diagnostics with nanoparticle analysis, we can finally start controlling CNT synthesis from the ground up. That control could be the key to reproducible CNT quality, not just higher yields.
 
 ---
 
